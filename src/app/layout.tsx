@@ -1,24 +1,20 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { SmoothScroll } from '@/components/SmoothScroll'
-import { Preloader } from '@/components/Preloader'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/Footer'
-import { ExitIntentModal } from '@/components/ExitIntentModal'
-import { StickyMobileCTA } from '@/components/StickyMobileCTA'
-import { SocialProofNotifications } from '@/components/SocialProof'
 import { GoogleAnalytics, GoogleAnalyticsNoScript, MetaPixel } from '@/components/Analytics'
 import { ScrollProgress } from '@/components/ScrollProgress'
-import { VelocityScroll } from '@/components/VelocityScroll'
 import { AnimationProvider } from '@/components/AnimationProvider'
+import { ClientEngagementLayer } from '@/components/ClientEngagementLayer'
 
 export const metadata: Metadata = {
-  title: 'IBNAY Digital Studio | Websites That Win Clients',
-  description: 'We do not build websites. We build the reason clients choose you over everyone else. Premium digital experiences for brands ready to lead.',
-  keywords: 'web design agency, digital experience studio, conversion-focused websites, brand strategy, web development',
+  title: 'IBNAY | Web Design, Development & SEO-Ready Websites',
+  description: 'IBNAY is a web design and development agency building SEO-ready websites, lead generation landing pages, custom web apps, ecommerce systems, Web3 dApps, and rescue rebuilds for businesses that need more qualified enquiries.',
+  keywords: 'web design agency, web development agency, website development company, custom website design, SEO website development, lead generation website, conversion focused website, website redesign agency, ecommerce website development, custom web application development, SaaS MVP development, web app development company, Web3 development agency, dApp development company, smart contract development, AI generated website rescue, unfinished website rebuild',
   openGraph: {
-    title: 'IBNAY Digital Studio | Websites That Win Clients',
-    description: 'We build websites that function as the highest-performing sales asset a business owns.',
+    title: 'IBNAY | Web Design, Development & SEO-Ready Websites',
+    description: 'We build websites and web products that explain the offer clearly, earn trust quickly, and turn the right visitors into leads.',
     type: 'website',
   },
 }
@@ -37,18 +33,13 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleAnalyticsNoScript />
         <ScrollProgress />
-        <Preloader />
-        <ExitIntentModal />
-        <StickyMobileCTA />
-        <SocialProofNotifications />
+        <ClientEngagementLayer />
         <AnimationProvider>
           <SmoothScroll>
             <Navigation />
-            <VelocityScroll>
-              <main>
-                {children}
-              </main>
-            </VelocityScroll>
+            <main>
+              {children}
+            </main>
             <Footer />
           </SmoothScroll>
         </AnimationProvider>

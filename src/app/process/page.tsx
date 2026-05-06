@@ -12,110 +12,110 @@ const phases = [
   {
     number: '01',
     icon: Search,
-    title: 'Architectural Audit',
-    timeline: 'Week 1–2',
-    description: 'We map the technical logic and tokenomics before we write a single line of code.',
-    clientInput: 'Access to existing protocol data, tokenomics vision, technical constraints, security requirements',
+    title: 'Project Reality Check',
+    timeline: 'Week 1-2',
+    description: 'We inspect what exists, clarify what must be built, and separate reusable work from risky assumptions.',
+    clientInput: 'Existing website, Figma file, repository, AI-generated build, product notes, business goals, blockers, deadline, and must-have features',
     deliverables: [
-      'Technical architecture blueprint',
-      'Tokenomics simulation report',
-      'Protocol logic flowchart',
-      'Security requirement mapping',
-      'Ecosystem incentive design',
+      'Project rescue audit',
+      'Feature and page map',
+      'Technical risk report',
+      'Reuse versus rebuild recommendation',
+      'Launch scope definition',
       'Project engineering roadmap',
     ],
-    tools: ['Notion', 'Figma', 'Miro', 'Tokenomics.ai'],
+    tools: ['Notion', 'Figma', 'GitHub', 'Miro'],
   },
   {
     number: '02',
     icon: FileText,
-    title: 'Ecosystem Engineering',
-    timeline: 'Week 2–4',
-    description: 'Building the immutable core. Solidity contracts and backend infrastructure.',
-    clientInput: 'Approval of logic flows, multi-sig signer selection, treasury management policy',
+    title: 'Product Architecture',
+    timeline: 'Week 2-4',
+    description: 'We design the full system before production work: UX flows, frontend structure, backend, database, integrations, and Web3 logic where needed.',
+    clientInput: 'Approval of user flows, content direction, required integrations, admin workflows, and launch priorities',
     deliverables: [
-      'Smart contract architecture',
-      'Referral engine logic',
+      'UX and conversion flow',
+      'Frontend component plan',
       'Backend API schema',
       'Database normalization plan',
-      'Incentive distribution logic',
-      'Initial Solidity contract suite',
+      'Integration requirements',
+      'Web3 contract architecture when needed',
     ],
-    tools: ['Solidity', 'Hardhat', 'PostgreSQL', 'Node.js'],
+    tools: ['Next.js', 'Node.js', 'PostgreSQL', 'Solidity'],
   },
   {
     number: '03',
     icon: Palette,
-    title: 'High-Intent Interface',
-    timeline: 'Week 4–7',
-    description: 'Bridging technical complexity with institutional-grade dashboard UI.',
-    clientInput: 'UI feedback rounds, brand asset delivery, user flow validation',
+    title: 'Interface and Content System',
+    timeline: 'Week 4-7',
+    description: 'We turn the architecture into a website or app that creates clarity, trust, and action from the first screen.',
+    clientInput: 'UI feedback, brand assets, offer details, testimonials or proof, product screenshots, and launch copy approvals',
     deliverables: [
-      'Institutional dashboard UI',
-      'Interactive Web3 prototypes',
+      'High-intent website UI',
+      'Interactive web app prototypes',
       'Design system documentation',
-      'Real-time data visualizations',
-      'Responsive dApp layout',
+      'SEO-aligned page structure',
+      'Responsive website and dApp layouts',
       'Technical frontend architecture',
     ],
-    tools: ['Figma', 'Spline', 'React', 'D3.js'],
+    tools: ['Figma', 'React', 'Tailwind', 'Framer Motion'],
   },
   {
     number: '04',
     icon: Code,
-    title: 'Full-Stack Implementation',
-    timeline: 'Week 7–11',
-    description: 'Rigorous coding, node-balancing, and internal security auditing.',
-    clientInput: 'Beta testing participation, technical documentation review, final approvals',
+    title: 'Full-Stack Development',
+    timeline: 'Week 7-11',
+    description: 'We build the production frontend, backend, database, integrations, smart contracts, admin tools, and deployment pipeline.',
+    clientInput: 'Beta testing participation, technical documentation review, content lock, and final approvals',
     deliverables: [
       'Production-ready Next.js app',
       'Optimized backend infrastructure',
-      'Integrated smart contracts',
-      'Automated unit testing suite',
-      'Internal security audit report',
-      'On-chain data indexing layer',
+      'Integrated payments, APIs, or smart contracts',
+      'Automated testing suite',
+      'Internal security review',
+      'Analytics and monitoring layer',
     ],
     tools: ['Next.js', 'Ethers.js', 'Vercel', 'GitHub', 'Sentry'],
   },
   {
     number: '05',
     icon: Rocket,
-    title: 'Audit & Deployment',
-    timeline: 'Week 11–12',
-    description: 'Final verification and mainnet scaling.',
-    clientInput: 'Mainnet deployment approval, audit report review, post-launch scaling coordination',
+    title: 'QA, Deployment and Launch Support',
+    timeline: 'Week 11-12',
+    description: 'Final testing, production deployment, analytics setup, security checks, and launch support.',
+    clientInput: 'Production approval, domain/DNS access, third-party account access, launch timing, and post-launch support priorities',
     deliverables: [
-      'Third-party audit coordination',
-      'Mainnet protocol deployment',
-      'Production server scaling',
-      'Technical support handoff',
-      'Protocol monitoring dashboard',
+      'QA and launch checklist',
+      'Production deployment',
+      'Server and app monitoring',
+      'Technical handoff documentation',
+      'Post-launch support plan',
       'Ongoing engineering support',
     ],
-    tools: ['CertiK', 'Hacken', 'Vercel', 'AWS', 'Grafana'],
+    tools: ['Vercel', 'AWS', 'Netlify', 'Grafana'],
   },
 ]
 
 const faqs = [
   {
-    question: 'How long does a complex ecosystem build take?',
-    answer: 'A standard Web3 engineering project—including smart contracts and backend—typically runs 12 weeks. Large-scale enterprise architectures or cross-chain protocols may extend to 20+ weeks depending on complexity.',
+    question: 'Can you take over a half-built website or app?',
+    answer: 'Yes. We regularly take over unfinished websites, AI-generated builds, messy repositories, and projects started by another freelancer or agency. We audit first, then tell you what to keep, fix, rebuild, or cut from launch scope.',
   },
   {
-    question: 'Which blockchain networks do you support?',
-    answer: 'We specialize in EVM-compatible chains including Ethereum, BSC, Polygon, and Arbitrum. For non-EVM chains like Solana or Sui, we provide specialized architectural consultation and engineering through our partner network.',
+    question: 'Do you build both Web2 and Web3 products?',
+    answer: 'Yes. We build traditional websites, SaaS MVPs, dashboards, ecommerce systems, APIs, and backend infrastructure, plus Web3 products such as dApps, smart contracts, wallet flows, token systems, and DeFi dashboards.',
   },
   {
-    question: 'How do you handle security?',
-    answer: 'Security is our first principle. We conduct internal unit testing and formal verification on all smart contracts. We also coordinate with leading third-party audit firms to ensure your code is battle-tested before mainnet deployment.',
+    question: 'How long does a full web agency build take?',
+    answer: 'A focused website or MVP can launch in 4-8 weeks. More complex web apps, dashboards, dApps, or rescue projects usually take 8-12 weeks depending on code quality, scope, integrations, and approval speed.',
   },
   {
-    question: 'What happens if we need to scale after launch?',
-    answer: 'Our architectures are built for scale from Day 1. We use node-balanced backends and scalable cloud infrastructure. We also offer technical retainers for ongoing performance tuning and infrastructure management.',
+    question: 'Can you fix something made with AI tools?',
+    answer: 'Yes. AI-generated apps often look impressive but miss architecture, security, database logic, responsive polish, and deployment reliability. We can convert that prototype into a production-ready web product.',
   },
   {
     question: 'How do you handle project communication?',
-    answer: 'We use Notion for technical documentation, Slack for real-time engineering coordination, and GitHub for version control. You have direct access to our lead architects—no project managers filtering the technical details.',
+    answer: 'We use Notion for documentation, Slack or WhatsApp for fast coordination, and GitHub for code. You get direct technical clarity instead of vague agency updates.',
   },
 ]
 
@@ -155,28 +155,24 @@ export default function ProcessPage() {
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="w-full px-6 md:px-12 lg:px-20">
-        {/* Header */}
         <div ref={headerRef} className="mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
             Our Process
           </span>
           <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-6">
-            How We Build
+            How We Turn
             <br />
-            <span className="text-accent">$10M Websites</span>
+            <span className="text-accent">Unfinished Ideas Into Live Products</span>
           </h1>
           <p className="text-body-lg text-foreground/60 max-w-2xl">
-            Every project follows our proven 10-week framework. No shortcuts. 
-            No surprises. Just systematic excellence.
+            A clear web agency process for custom websites, web apps, Web3 products, dApps, and rescue projects that need a reliable path to launch.
           </p>
         </div>
 
-        {/* Phases */}
         <div className="space-y-24 mb-32">
           {phases.map((phase, index) => (
             <section key={index} className="phase-section">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-                {/* Left Column - Phase Info */}
                 <div className="lg:col-span-4">
                   <div className="sticky top-32">
                     <div className="flex items-center gap-4 mb-6">
@@ -191,15 +187,12 @@ export default function ProcessPage() {
                   </div>
                 </div>
 
-                {/* Right Column - Details */}
                 <div className="lg:col-span-8 space-y-8">
-                  {/* Client Input */}
                   <div className="p-6 border border-border rounded-lg">
                     <h3 className="font-mono text-label text-foreground/50 uppercase tracking-widest mb-3">What We Need From You</h3>
                     <p className="text-body text-foreground/70">{phase.clientInput}</p>
                   </div>
 
-                  {/* Deliverables */}
                   <div>
                     <h3 className="font-mono text-label text-foreground/50 uppercase tracking-widest mb-4">Deliverables</h3>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -212,7 +205,6 @@ export default function ProcessPage() {
                     </ul>
                   </div>
 
-                  {/* Tools */}
                   <div className="flex flex-wrap gap-2">
                     {phase.tools.map((tool, i) => (
                       <span key={i} className="px-3 py-1 bg-surface-dark border border-border rounded-full font-mono text-label text-foreground/50">
@@ -223,7 +215,6 @@ export default function ProcessPage() {
                 </div>
               </div>
 
-              {/* Divider */}
               {index < phases.length - 1 && (
                 <div className="mt-16 flex items-center justify-center">
                   <div className="w-px h-16 bg-border" />
@@ -233,7 +224,6 @@ export default function ProcessPage() {
           ))}
         </div>
 
-        {/* FAQ Section */}
         <section className="mb-32">
           <div className="text-center mb-12">
             <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
@@ -264,16 +254,15 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        {/* CTA */}
         <section className="text-center py-16 border-t border-border">
           <h2 className="font-display text-display-sm text-foreground mb-4">
-            Ready to start your project?
+            Ready to get the project moving?
           </h2>
           <p className="text-body text-foreground/60 mb-8 max-w-xl mx-auto">
-            Book a free strategy call. We will walk you through exactly how we would approach your specific situation.
+            Send the idea, site, repo, or prototype. We will show you the fastest responsible path to a live product.
           </p>
           <Link href="/contact" className="btn-primary group">
-            Book Your Free Call
+            Get Your Build Plan
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </section>

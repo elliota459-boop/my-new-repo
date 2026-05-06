@@ -28,12 +28,13 @@ const steps = [
 ]
 
 const services = [
-  'Web Design & Development',
-  'Web3 / Blockchain Development',
-  'Brand Strategy & Identity',
-  'Conversion Optimization',
+  'Custom Website Development',
+  'Web App / SaaS MVP',
+  'Web3 / dApp Development',
   'Smart Contract Development',
-  'NFT Project Launch',
+  'Half-Built Project Rescue',
+  'AI-Generated App Cleanup',
+  'Backend Infrastructure',
   'Other',
 ]
 
@@ -97,7 +98,7 @@ export function MultiStepForm() {
           Message Sent!
         </h3>
         <p className="text-body text-foreground/60">
-          We&apos;ll review your project details and get back to you within 24 hours.
+          We&apos;ll review your project details and get back to you with a practical launch path.
         </p>
       </div>
     )
@@ -215,7 +216,7 @@ export function MultiStepForm() {
                   value={formData.description}
                   onChange={(e) => updateField('description', e.target.value)}
                   className="w-full px-4 py-3 bg-surface-dark border border-border rounded-lg focus:border-accent focus:outline-none text-foreground h-32 resize-none"
-                  placeholder="Tell us about your project goals, challenges, and timeline..."
+                  placeholder="Tell us if we are starting from zero, rescuing an existing build, cleaning up an AI-made prototype, or adding Web3/backend features..."
                   required
                 />
               </div>

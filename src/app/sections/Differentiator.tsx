@@ -10,18 +10,18 @@ gsap.registerPlugin(ScrollTrigger)
 const differentiators = [
   {
     icon: Target,
-    headline: 'Ecosystem Architecture',
-    copy: 'We don\'t just build frontends. We architect entire financial and technical ecosystems. From Solidity smart contracts to complex backend infrastructures, we ensure your business logic is immutable and scalable.',
+    headline: 'Built Around Search Intent',
+    copy: 'We shape pages around the phrases buyers actually use: web design agency, website development company, website redesign, custom web app, ecommerce website, SEO website, and project rescue.',
   },
   {
     icon: BarChart3,
-    headline: 'High-Intent Engineering',
-    copy: 'Every line of code is written to drive conversion and performance. We focus on low-latency systems and secure smart contracts that function as high-performing assets, not just digital brochures.',
+    headline: 'Answers Before Animation',
+    copy: 'A visitor should understand your offer, proof, pricing logic, process, risk, and next step before they get distracted. We use design to support trust, not hide weak positioning.',
   },
   {
     icon: Compass,
-    headline: 'Quantifiable Results',
-    copy: 'Our builds aren\'t just "beautiful"—they\'re profitable. We measure success through TVL growth, trading velocity, and operational efficiency. If it doesn\'t move the needle, it doesn\'t get built.',
+    headline: 'Human Lead Psychology',
+    copy: 'People enquire when they feel seen, safe, and understood. We write and structure content around their doubts, urgency, objections, comparison shopping, and fear of choosing the wrong team.',
   },
 ]
 
@@ -51,28 +51,26 @@ export function Differentiator() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="section-padding bg-background"
     >
       <div className="w-full px-6 md:px-12 lg:px-20">
-        {/* Section Header */}
         <div className="text-center mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            How We Think
+            Why It Converts
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground">
-            The Difference
+            Content That Feels Like an Answer
           </h2>
         </div>
 
-        {/* 3 Column Grid */}
-        <div 
+        <div
           ref={cardsRef}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
         >
           {differentiators.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="diff-card group"
             >

@@ -8,19 +8,23 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const projectTypes = [
-  'Web3 Ecosystem',
-  'Solidity Protocol',
+  'New SEO-Ready Website',
+  'Website Redesign / Lead Improvement',
+  'Landing Page for Ads or Google',
+  'Web App / SaaS MVP',
+  'Ecommerce Website',
+  'Web3 dApp / Smart Contract',
+  'Half-Built Project Rescue',
+  'AI-Generated App Cleanup',
   'Backend Infrastructure',
-  'Enterprise AI / EdTech',
-  'Ecosystem Audit',
   'Other',
 ]
 
 const budgetRanges = [
   'Under $25K',
-  '$25K – $50K',
-  '$50K – $100K',
-  '$100K – $250K',
+  '$25K - $50K',
+  '$50K - $100K',
+  '$100K - $250K',
   '$250K+',
 ]
 
@@ -69,19 +73,19 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          _subject: `New Project Inquiry from ${formData.name}`,
-        }),
+      const formDataObj = new FormData()
+      formDataObj.append('form-name', 'contact')
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value)
       })
-      
+
+      const response = await fetch('/', {
+        method: 'POST',
+        body: formDataObj,
+      })
+
       if (response.ok) {
         setIsSubmitted(true)
         // Track conversion
@@ -95,7 +99,7 @@ export default function ContactPage() {
         throw new Error('Submission failed')
       }
     } catch (error) {
-      alert('Something went wrong. Please try again or email us directly at hello@ibnay.studio')
+      alert('Something went wrong. Please try again or email us directly at info@ibnayiftribe.com')
     } finally {
       setIsSubmitting(false)
     }
@@ -113,7 +117,7 @@ export default function ContactPage() {
               Message Received
             </h1>
             <p className="text-body-lg text-foreground/60 mb-8">
-              Thank you for reaching out. We will review your project details and get back to you within 4 business hours with our initial thoughts and next steps.
+              Thank you for reaching out. We will review your project details and get back to you within 4 business hours with our initial thoughts, risks, and next steps.
             </p>
             <p className="font-mono text-label text-foreground/40">
               In the meantime, feel free to explore our work or learn more about our process.
@@ -134,13 +138,12 @@ export default function ContactPage() {
               Get In Touch
             </span>
             <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-6">
-              Consult with a
+              Tell Us What Your Website
               <br />
-              <span className="text-accent">Lead Architect</span>
+              <span className="text-accent">Needs to Achieve</span>
             </h1>
             <p className="text-body-lg text-foreground/60 mb-12 max-w-md">
-              Tell us about your technical requirements and we will tell you exactly how we would engineer the solution. 
-              No sales pitch. Just an architectural conversation.
+              Send your current website, idea, Figma file, repository, AI-generated prototype, or half-built product. We will review what buyers are likely searching for, what your page is not answering, and what needs to change to attract better leads.
             </p>
 
             {/* Contact Methods */}
@@ -155,27 +158,27 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <a href="mailto:hello@ibnay.studio" className="flex items-center gap-4 group">
+              <a href="mailto:info@ibnayiftribe.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-display text-heading-sm text-foreground group-hover:text-accent transition-colors">Email Us</h3>
-                  <p className="text-body text-foreground/60">hello@ibnay.studio</p>
+                  <p className="text-body text-foreground/60">info@ibnayiftribe.com</p>
                 </div>
               </a>
 
-              <a href="tel:+919876543210" className="flex items-center gap-4 group">
+              <a href="tel:+917990866163" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-display text-heading-sm text-foreground group-hover:text-accent transition-colors">Call Us</h3>
-                  <p className="text-body text-foreground/60">+91 98765 43210</p>
+                  <p className="text-body text-foreground/60">+91 7990866163</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/919876543210" className="flex items-center gap-4 group">
+              <a href="https://wa.me/917990866163" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-accent" />
                 </div>
@@ -189,14 +192,27 @@ export default function ContactPage() {
             {/* Scarcity Note */}
             <div className="p-6 border border-accent/30 bg-accent/5 rounded-lg">
               <p className="font-mono text-label text-accent">
-                We take on 3 new clients per month to ensure quality delivery.
+                We take on a limited number of website strategy reviews each month so every response is specific, useful, and honest.
               </p>
             </div>
           </div>
 
           {/* Right Side - Form */}
           <div>
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="space-y-6"
+              data-netlify="true"
+              name="contact"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p className="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
               {/* Name */}
               <div>
                 <label htmlFor="name" className="font-mono text-label text-foreground/50 uppercase tracking-widest block mb-3">
@@ -247,7 +263,7 @@ export default function ContactPage() {
               {/* Project Type */}
               <div>
                 <label htmlFor="projectType" className="font-mono text-label text-foreground/50 uppercase tracking-widest block mb-3">
-                  What are you looking to build?
+                  What do you need help with?
                 </label>
                 <select
                   id="projectType"
@@ -285,7 +301,7 @@ export default function ContactPage() {
               {/* Message */}
               <div>
                 <label htmlFor="message" className="font-mono text-label text-foreground/50 uppercase tracking-widest block mb-3">
-                  Tell us more about your project
+                  Tell us what is not working yet
                 </label>
                 <textarea
                   id="message"
@@ -293,7 +309,7 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-4 bg-surface-dark border border-border rounded-lg text-foreground placeholder-foreground/30 focus:border-accent focus:outline-none transition-colors resize-none"
-                  placeholder="What challenges are you facing? What are your goals? Any specific requirements or deadlines?"
+                  placeholder="Share your website link if you have one. Tell us what you want: more Google leads, a redesign, better content, faster pages, a web app, ecommerce, Web3, or rescue work. Include deadlines, blockers, competitors, and must-have features."
                 />
               </div>
 
@@ -307,7 +323,7 @@ export default function ContactPage() {
                   'Sending...'
                 ) : (
                   <>
-                    Lets Talk
+                    Get My Website Plan
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </>
                 )}
@@ -321,7 +337,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-2 text-foreground/40">
                   <Calendar className="w-4 h-4" />
-                  <span className="font-mono text-label">Free 30-min strategy call</span>
+                  <span className="font-mono text-label">Free 30-min project review</span>
                 </div>
                 <div className="flex items-center gap-2 text-foreground/40">
                   <Shield className="w-4 h-4" />

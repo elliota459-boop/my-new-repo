@@ -12,30 +12,30 @@ const steps = [
   {
     number: '01',
     icon: Search,
-    title: 'Architectural Audit',
-    timeline: 'Week 1–2',
-    description: 'We audit your technical requirements, tokenomics, and competitive landscape. We define the logic before we write a single line of code.',
+    title: 'Buyer and Search Audit',
+    timeline: 'Week 1-2',
+    description: 'We study your offer, ideal customer, competitors, current website, Google search intent, and the questions a buyer needs answered before they contact you.',
   },
   {
     number: '02',
     icon: Map,
-    title: 'Protocol & Ecosystem',
-    timeline: 'Week 2–4',
-    description: 'We architect the smart contracts and backend infrastructure. Every referral engine and distribution logic is mapped for absolute integrity.',
+    title: 'Website Message Map',
+    timeline: 'Week 2-4',
+    description: 'We plan service pages, landing pages, proof, FAQs, calls to action, content hierarchy, forms, analytics, and technical structure around conversion and SEO.',
   },
   {
     number: '03',
     icon: Palette,
-    title: 'High-Intent Interface',
-    timeline: 'Week 4–7',
-    description: 'We design the user layer to bridge the gap between technical complexity and intuitive interaction. UI that creates immediate trust.',
+    title: 'Design and Build',
+    timeline: 'Week 4-7',
+    description: 'We design and develop a fast website or web app that feels credible, answers objections, works on mobile, and gives qualified visitors a clear next step.',
   },
   {
     number: '04',
     icon: Rocket,
-    title: 'Deployment & Scaling',
-    timeline: 'Week 7–12',
-    description: 'Final security audits, on-chain deployment, and infrastructure scaling. We launch ecosystems that are built to last.',
+    title: 'Launch and Handoff',
+    timeline: 'Week 7-12',
+    description: 'We deploy, test, connect search and conversion tracking, document the system, and stay close so the website can improve after real visitors arrive.',
   },
 ]
 
@@ -65,62 +65,54 @@ export function ProcessTeaser() {
   }, [])
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="section-padding bg-background overflow-hidden"
     >
       <div className="w-full px-6 md:px-12 lg:px-20">
-        {/* Section Header */}
         <div className="mb-16 md:mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            Our Process
+            Ranking and Lead Process
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground mb-6">
-            How a Complex Ecosystem
+            How a Website
             <br />
-            <span className="text-accent">Gets Engineered</span>
+            <span className="text-accent">Becomes a Lead System</span>
           </h2>
           <p className="text-body-lg text-foreground/60 max-w-xl">
-            Every project follows our rigorous engineering framework. From protocol design to final security audit, we deliver systematic excellence.
+            We do not just fill sections with attractive words. We turn search intent, buyer psychology, proof, UX, engineering, and analytics into one clear path from Google visit to enquiry.
           </p>
         </div>
 
-        {/* Horizontal Steps */}
-        <div 
+        <div
           ref={stepsRef}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {steps.map((step, index) => (
-            <div 
+            <div
               key={index}
               className="process-step relative p-8 border border-border rounded-lg group hover:border-accent/50 transition-colors duration-300"
             >
-              {/* Number */}
               <span className="font-mono text-label text-foreground/20 absolute top-6 right-6">
                 {step.number}
               </span>
 
-              {/* Icon */}
               <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                 <step.icon className="w-5 h-5 text-accent" />
               </div>
 
-              {/* Timeline */}
               <span className="font-mono text-label text-foreground/40 block mb-3">
                 {step.timeline}
               </span>
 
-              {/* Title */}
               <h3 className="font-display text-heading-sm text-foreground mb-3 group-hover:text-accent transition-colors">
                 {step.title}
               </h3>
 
-              {/* Description */}
               <p className="text-body text-foreground/60">
                 {step.description}
               </p>
 
-              {/* Connector Line (except last) */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-px bg-border">
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-border" />
@@ -130,10 +122,9 @@ export function ProcessTeaser() {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="mt-16 text-center">
-          <Link 
-            href="/process" 
+          <Link
+            href="/process"
             className="btn-outline group inline-flex"
           >
             See The Full Process

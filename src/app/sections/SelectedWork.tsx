@@ -106,14 +106,14 @@ export function SelectedWork() {
             <h2 className="font-display text-display-sm md:text-display-md text-foreground">
               Projects That
               <br />
-              <span className="text-accent">Prove Our Claim</span>
+              <span className="text-accent">That Made It Live</span>
             </h2>
           </div>
           <Link 
             href="/work" 
             className="text-link mt-6 md:mt-0"
           >
-            View All 40+ Projects
+            View Web2 and Web3 Work
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

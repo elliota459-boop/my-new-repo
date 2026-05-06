@@ -30,96 +30,98 @@ gsap.registerPlugin(ScrollTrigger)
 
 const web2Services = [
   {
-    id: 'web3-engineering',
+    id: 'custom-web-development',
     icon: Globe,
-    title: 'Full-Stack Web3 Engineering',
-    subtitle: 'Institutional-grade ecosystems built for scale',
-    description: 'We build high-performance, decentralized ecosystems using Next.js, Solidity, and custom Node.js backends. Every line of code is engineered for institutional-grade reliability, moving beyond generic frontends to complete technical integrity.',
+    title: 'Website Design and Development',
+    subtitle: 'For businesses that need to be found, understood, and contacted',
+    description: 'We design and develop SEO-ready business websites, service pages, landing pages, ecommerce sites, and custom web applications with clear positioning, fast performance, mobile polish, contact forms, analytics, and conversion-focused structure handled by one team.',
     features: [
-      'Custom Solidity Smart Contracts (EVM)',
-      'High-Frequency Node.js Backends',
-      'Proprietary Distribution Engines',
-      'Gas-Optimized Protocol Logic',
-      'Institutional-Grade UI/UX Dashboards',
-      'Secure Multi-Sig Infrastructure',
-      'Real-time On-Chain Data Indexing',
-      '99.9% Infrastructure Uptime Guarantee'
+      'Custom Website Design',
+      'SEO Website Development',
+      'Lead Generation Landing Pages',
+      'Service Page Content Structure',
+      'Website Redesign and Rebuilds',
+      'Next.js and React Frontends',
+      'Contact, CRM, and Email Integrations',
+      'Analytics and Conversion Tracking'
     ],
     deliverables: [
-      'Complete Technical Architecture',
-      'Audited Smart Contract Suite',
-      'Scalable Backend API',
-      'High-Intent User Dashboard',
-      'Deployment & Security Roadmap'
+      'SEO-Ready Website',
+      'Conversion Page Map',
+      'Reusable Component System',
+      'Lead Capture Forms',
+      'Analytics and Handoff Documentation'
     ],
-    pricing: '$45,000 – $150,000+',
-    timeline: '10–16 weeks',
+    pricing: '$8,000 - $45,000+',
+    timeline: '4-10 weeks',
     testimonial: {
-      quote: 'They built a complex financial engine that handles $50M+ in volume. Their engineering depth is unmatched.',
+      quote: 'The new website finally explained our offer in seconds. We stopped sounding like everyone else and started getting better-fit enquiries.',
       author: 'Ecosystem Lead',
       role: 'Founder',
       company: 'Unicorn Stake'
     }
   },
   {
-    id: 'backend-infrastructure',
+    id: 'ai-product-rescue',
     icon: Cpu,
-    title: 'Complex Backend Infrastructure',
-    subtitle: 'Scalable systems for AI and Enterprise',
-    description: 'Specialized backend engineering for high-load platforms. From Node-balanced architectures to proprietary AI data pipelines and large-scale EdTech systems.',
+    title: 'Website Redesign and Project Rescue',
+    subtitle: 'For websites that look done but do not work, rank, or convert',
+    description: 'Already have a slow website, confusing landing page, broken WordPress build, messy repository, no-code site, Figma design, or AI-generated app? We audit what exists, keep what is useful, rebuild what is fragile, and move the project toward a trustworthy launch.',
     features: [
-      'Microservices Architecture',
-      'Node-Balanced Server Clusters',
-      'Custom AI Data Modeling (NDA)',
-      'High-Throughput PostgreSQL/Supabase',
-      'Enterprise Authentication (SSO/IAM)',
-      'Real-time WebSocket Clusters',
-      'Automated DevOps & CI/CD Pipelines',
-      'Proprietary Encryption Protocols'
+      'Website Content and UX Audit',
+      'SEO Structure Review',
+      'AI-Generated Website Cleanup',
+      'Broken Website Rebuilds',
+      'Speed and Mobile Repair',
+      'Frontend and Backend Refactoring',
+      'Form and Tracking Fixes',
+      'Launch Blocker Removal'
     ],
     deliverables: [
-      'Production-Ready Infrastructure',
-      'Architecture Documentation',
-      'Security Audit Report',
-      'Scaling Roadmap',
-      '24/7 Monitoring Integration'
+      'Rescue Audit Report',
+      'Rebuilt Website or Codebase',
+      'Critical Bug Resolution',
+      'SEO and Conversion Fix List',
+      'Launch Readiness Checklist'
     ],
-    pricing: '$60,000 – $200,000+',
-    timeline: '12–24 weeks',
+    pricing: '$5,000 - $60,000+',
+    timeline: '2-12 weeks',
     testimonial: {
-      quote: 'Flawless execution on our core infrastructure. They handle complexity where other agencies quit.',
+      quote: 'We had an AI-built website that looked polished but created no trust. IBNAY rebuilt the message, flow, and technical base.',
       author: 'VP Engineering',
       role: 'CTO',
       company: 'Confidential AI Leader'
     }
   },
   {
-    id: 'tokenomics-strategy',
+    id: 'backend-infrastructure',
     icon: Palette,
-    title: 'Tokenomics & Ecosystem Strategy',
-    subtitle: 'Engineering the logic of decentralized growth',
-    description: 'We don\'t just design logos; we architect the economic incentives that drive your ecosystem. Our strategy phase defines the math and logic before the first line of code is written.',
+    title: 'Custom Web App and Backend Development',
+    subtitle: 'For businesses that need more than pages',
+    description: 'We engineer the systems behind serious websites and web apps: SaaS MVPs, dashboards, portals, booking flows, ecommerce logic, APIs, databases, admin tools, authentication, payments, automations, integrations, and scalable deployment.',
     features: [
-      'Tokenomics Modeling & Simulation',
-      'Referral & Incentive Engine Logic',
-      'Ecosystem Sustainability Audits',
-      'Market Entry Technical Strategy',
-      'Governance Framework Design',
-      'Liquidity & Staking Mechanisms',
-      'Cross-Chain Interoperability Logic',
-      'Institutional Pitch Decks (Technical)'
+      'SaaS MVP Development',
+      'Dashboard and Portal Development',
+      'REST and GraphQL API Development',
+      'PostgreSQL and Supabase Architecture',
+      'Authentication and Role Permissions',
+      'Payment and Subscription Systems',
+      'Admin Operations Dashboards',
+      'Third-Party Integrations',
+      'DevOps and CI/CD Pipelines',
+      'Security and Performance Hardening'
     ],
     deliverables: [
-      'Ecosystem Logic Blueprint',
-      'Tokenomics Math Model',
-      'Technical Strategy Document',
-      'Governance Protocol Design',
-      'Milestone-Based Growth Roadmap'
+      'Backend Architecture Blueprint',
+      'Production API Layer',
+      'Database Schema',
+      'Admin Workflow',
+      'Scaling and Maintenance Roadmap'
     ],
-    pricing: '$25,000 – $60,000',
-    timeline: '4–8 weeks',
+    pricing: '$25,000 - $120,000+',
+    timeline: '6-16 weeks',
     testimonial: {
-      quote: 'Their strategy work alone was worth 10x the investment. They defined our competitive moat.',
+      quote: 'They did the serious backend work our previous team avoided. The product finally felt stable enough to sell.',
       author: 'Marcus Rodriguez',
       role: 'CMO',
       company: 'Apex Capital'
@@ -128,30 +130,31 @@ const web2Services = [
   {
     id: 'performance-engineering',
     icon: TrendingUp,
-    title: 'Performance Growth Engineering',
-    subtitle: 'Optimizing the technical layer of conversion',
-    description: 'We treat conversion as an engineering problem. We analyze the technical friction points in your ecosystem and re-architect the experience for maximum throughput.',
+    title: 'SEO and Conversion Website Optimization',
+    subtitle: 'For websites getting traffic but not enough qualified leads',
+    description: 'We improve existing websites around Google search intent, speed, clarity, trust, page hierarchy, user psychology, and form friction so visitors understand the offer and take the next step.',
     features: [
-      'Technical Conversion Audits',
-      'Low-Latency Performance Tuning',
-      'User Psychology Architectural Maps',
-      'Landing Page Performance Engineering',
-      'On-Chain Friction Reduction',
-      'High-Precision A/B Testing Suites',
-      'Real-time Analytics Architectures',
-      '90-Day KPI Engineering Support'
+      'Technical Website Audits',
+      'SEO Page and Keyword Mapping',
+      'Core Web Vitals Improvement',
+      'Buyer Psychology Content Maps',
+      'Landing Page Conversion Optimization',
+      'Checkout and Form Friction Reduction',
+      'Trust Signal and Proof Placement',
+      'Analytics and Event Tracking',
+      '90-Day Improvement Roadmap'
     ],
     deliverables: [
-      'Engineering Growth Audit',
-      'Optimized Protocol Interfaces',
-      'Performance Roadmap',
+      'Website Growth Audit',
+      'Optimized User Journeys',
+      'Performance and SEO Roadmap',
       'Analytics Infrastructure',
       'Quarterly Performance Tuning'
     ],
-    pricing: '$20,000 – $50,000',
-    timeline: '6–10 weeks',
+    pricing: '$6,000 - $35,000+',
+    timeline: '3-8 weeks',
     testimonial: {
-      quote: 'Our trading velocity increased by 12% in 30 days after their architectural tuning.',
+      quote: 'The site finally explained what we do in seconds. Speed improved, leads improved, and the team stopped apologizing for the website.',
       author: 'Technical Lead',
       role: 'CTO',
       company: 'AgriTrade'
@@ -164,8 +167,8 @@ const web3Services = [
     id: 'solidity-protocols',
     icon: Shield,
     title: 'Custom Solidity Protocols',
-    subtitle: 'Secure, audited on-chain architecture',
-    description: 'We engineer secure smart contracts for complex DeFi mechanisms, DAOs, and token launches. Every protocol is battle-tested and optimized for gas efficiency and systematic security.',
+    subtitle: 'Secure on-chain logic for products people can actually use',
+    description: 'We engineer smart contracts for DeFi flows, token launches, DAOs, NFT utilities, staking, rewards, and custom Web3 products, then connect them to usable dashboards and backend infrastructure.',
     features: [
       'Advanced Solidity Protocol Design',
       'Proprietary Staking & Yield Logic',
@@ -195,9 +198,9 @@ const web3Services = [
   {
     id: 'institutional-dashboards',
     icon: Layers,
-    title: 'Institutional Dashboards',
-    subtitle: 'Bridging technical complexity and UI',
-    description: 'High-performance user interfaces for complex ecosystems. We connect institutional-grade backends to intuitive, high-intent dashboards that drive user retention.',
+    title: 'dApp Frontends & Wallet Experiences',
+    subtitle: 'Web3 interfaces that feel clear instead of risky',
+    description: 'High-performance dApp interfaces for users, admins, and communities. We connect wallet authentication, smart contract calls, backend data, charts, transaction states, and trust-building UX.',
     features: [
       'Real-time On-Chain Data Feeds',
       'Complex Transaction Handling',
@@ -227,9 +230,9 @@ const web3Services = [
   {
     id: 'ecosystem-tokenomics',
     icon: Coins,
-    title: 'Ecosystem & Tokenomics',
-    subtitle: 'Engineering sustainable economic logic',
-    description: 'We architect the mathematical foundation of your ecosystem. From supply dynamics to referral multi-level rewards, we ensure your project is built for long-term technical sustainability.',
+    title: 'Token Systems & Web3 Product Architecture',
+    subtitle: 'The logic before the launch',
+    description: 'Before code becomes expensive, we map token flows, wallet roles, reward logic, admin controls, launch phases, user risks, and technical dependencies so the product has a real operating system.',
     features: [
       'Mathematical Token Modeling',
       'Multi-Level Referral Engines',
@@ -305,18 +308,15 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="font-mono text-sm text-accent-light">Web2 & Web3 Expertise</span>
+            <span className="font-mono text-sm text-accent-light">Website, SEO, Web App and Web3 Expertise</span>
           </motion.div>
           
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 max-w-4xl">
-            From
-            <span className="text-foreground-muted"> "Nice Website" </span>
-            to
-            <span className="text-accent block"> Revenue Machine</span>
+            Website Services For
+            <span className="text-accent block">Search, Trust and Qualified Leads</span>
           </h1>
           <p className="text-xl text-foreground-muted max-w-2xl leading-relaxed mb-8">
-            Most agencies deliver beautiful decoration. We deliver measurable business results. 
-            Every service is engineered to increase your revenue, not just your awards count.
+            People searching on Google do not want a generic marketing agency. They want a clear answer to a real problem: build my website, redesign my site, improve my leads, fix my broken build, or develop my web app. These services are structured around those buying moments.
           </p>
           
           {/* Transformation Metrics */}
@@ -326,8 +326,8 @@ export default function ServicesPage() {
                 <TrendingUp className="w-6 h-6 text-success" />
               </div>
               <div>
-                <div className="font-display text-2xl text-foreground">312%</div>
-                <div className="font-mono text-sm text-foreground-subtle">Avg. Lead Increase</div>
+                <div className="font-display text-2xl text-foreground">40+</div>
+                <div className="font-mono text-sm text-foreground-subtle">Search Pages Mapped</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -335,7 +335,7 @@ export default function ServicesPage() {
                 <Clock className="w-6 h-6 text-warm" />
               </div>
               <div>
-                <div className="font-display text-2xl text-foreground">10-12</div>
+                <div className="font-display text-2xl text-foreground">4-12</div>
                 <div className="font-mono text-sm text-foreground-subtle">Weeks to Launch</div>
               </div>
             </div>
@@ -345,7 +345,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <div className="font-display text-2xl text-foreground">98%</div>
-                <div className="font-mono text-sm text-foreground-subtle">Client Retention</div>
+                <div className="font-mono text-sm text-foreground-subtle">Clarity Focus</div>
               </div>
             </div>
           </div>
@@ -398,12 +398,12 @@ export default function ServicesPage() {
               </motion.div>
               <div>
                 <h2 className="font-display text-2xl text-foreground mb-3">
-                  {activeTab === 'web2' ? 'Traditional Web Services' : 'Blockchain & Decentralized Services'}
+                  {activeTab === 'web2' ? 'Website Design, SEO and Web App Development' : 'Web3, Smart Contract, and dApp Development'}
                 </h2>
                 <p className="text-foreground-muted text-lg leading-relaxed max-w-2xl">
                   {activeTab === 'web2' 
-                    ? 'High-performance websites, web applications, and conversion optimization for businesses that want measurable ROI. Every project includes analytics setup and 90-day performance tracking.'
-                    : 'Smart contracts, dApps, NFT projects, and DeFi protocols with security-first development. Battle-tested code, comprehensive auditing, and gas-optimized deployments.'}
+                    ? 'SEO-ready websites, service pages, landing pages, website redesigns, custom web apps, dashboards, ecommerce builds, backend systems, and rescue work for unfinished or AI-generated projects.'
+                    : 'Smart contracts, dApps, wallet flows, token systems, DeFi dashboards, NFT utilities, and blockchain integrations built with security-first development and clear user experience.'}
                 </p>
               </div>
             </div>
@@ -543,10 +543,10 @@ export default function ServicesPage() {
             Not sure what you need?
           </h2>
           <p className="text-body text-foreground/60 mb-8 max-w-xl mx-auto">
-            Book a free strategy call. We&apos;ll assess your situation and recommend the right services for your goals.
+            Send us what you have. We&apos;ll assess the idea, current website, repo, or AI-generated prototype and recommend the fastest responsible path to launch.
           </p>
           <Link href="/contact" className="btn-primary group inline-flex">
-            Book Free Consultation
+            Get a Launch Plan
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

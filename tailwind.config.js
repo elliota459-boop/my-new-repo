@@ -36,9 +36,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['Neue Montreal', 'Inter', 'system-ui', 'sans-serif'],
-        body: ['Satoshi', 'Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       fontSize: {
         'display-xl': ['120px', { lineHeight: '1', letterSpacing: '-0.02em' }],

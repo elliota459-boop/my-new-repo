@@ -44,26 +44,26 @@ export function ProblemStatement() {
         >
           {/* Label */}
           <span className="font-mono text-label text-background/50 tracking-widest uppercase block mb-8">
-            The Reality
+            The Problem Your Buyer Feels
           </span>
 
           {/* Headline */}
           <h2 className="font-display text-display-sm md:text-display-md text-background mb-8 leading-tight">
-            Most Web3 projects are 
+            Most websites look active
             <br />
-            frontends with no integrity.
+            but do not create demand.
           </h2>
 
           {/* Body Text */}
           <div className="space-y-6 text-body-lg text-background/70 max-w-2xl mx-auto">
             <p>
-              Beautiful UI is easy. But building a complex, working ecosystem that actually functions as committed? That is rare. Most "web agencies" shy away from the backend complexity that drives real business results.
+              Your customer usually arrives with doubt, impatience, and too many open tabs. If your website does not answer what you do, who it is for, why you are safe to choose, and what happens next, they leave without enquiring.
             </p>
             <p className="text-background">
-              The problem isn&apos;t your token. It&apos;s your architecture.
+              The hidden cost is not just bad design. It is unanswered fear.
             </p>
             <p>
-              We engineer full-stack infrastructures from the smart contract layer to the user dashboard, ensuring your ecosystem is as robust as it is intuitive.
+              IBNAY builds web agency content, UX, SEO structure, frontend, backend, and conversion paths around the questions real buyers search on Google before they are ready to talk.
             </p>
           </div>
         </div>

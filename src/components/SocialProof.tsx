@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react'
 import { CheckCircle, X } from 'lucide-react'
 
 const notifications = [
-  { name: 'Sarah from TechVenture', action: 'booked a strategy call', time: '2 minutes ago' },
-  { name: 'Marcus from Apex Capital', action: 'requested a quote', time: '12 minutes ago' },
-  { name: 'Emily from Meridian Health', action: 'downloaded the audit checklist', time: '28 minutes ago' },
-  { name: 'Someone from San Francisco', action: 'viewed case studies', time: 'Just now' },
-  { name: 'James from Nova Commerce', action: 'started a project inquiry', time: '45 minutes ago' },
+  { name: 'A founder from London', action: 'requested a project rescue audit', time: '2 minutes ago' },
+  { name: 'A Web3 team', action: 'asked about dApp development', time: '12 minutes ago' },
+  { name: 'Someone with an AI prototype', action: 'requested launch help', time: '28 minutes ago' },
+  { name: 'A SaaS founder', action: 'viewed case studies', time: 'Just now' },
+  { name: 'An ecommerce brand', action: 'started a website rebuild inquiry', time: '45 minutes ago' },
 ]
 
 export function SocialProofNotifications() {
@@ -17,27 +17,34 @@ export function SocialProofNotifications() {
   const [isDismissed, setIsDismissed] = useState(false)
 
   useEffect(() => {
+    // Check if already shown in this session
+    if (sessionStorage.getItem('socialProofShown')) {
+      setIsDismissed(true)
+      return
+    }
+
     if (isDismissed) return
 
     // Show first notification after 10 seconds
     const initialTimer = setTimeout(() => {
       setIsVisible(true)
+      // Mark as shown immediately after first appearance
+      sessionStorage.setItem('socialProofShown', 'true')
     }, 10000)
 
-    // Rotate notifications every 8 seconds
-    const rotationInterval = setInterval(() => {
-      setIsVisible(false)
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % notifications.length)
-        setIsVisible(true)
-      }, 500)
-    }, 8000)
+    // Automatically hide after 8 seconds of visibility
+    const hideTimer = setTimeout(() => {
+      if (isVisible) {
+        setIsVisible(false)
+        setIsDismissed(true) // Permanently dismiss after showing once
+      }
+    }, 18000) // 10s delay + 8s visibility
 
     return () => {
       clearTimeout(initialTimer)
-      clearInterval(rotationInterval)
+      clearTimeout(hideTimer)
     }
-  }, [isDismissed])
+  }, [isDismissed, isVisible])
 
   if (isDismissed) return null
 
@@ -109,10 +116,10 @@ export function TrustBadges() {
   return (
     <div className="flex flex-wrap items-center justify-center gap-6 py-4">
       {[
-        { label: '150+ Projects', sublabel: 'Delivered' },
-        { label: '$120M+', sublabel: 'Revenue Generated' },
-        { label: '98%', sublabel: 'Client Retention' },
-        { label: '4.9/5', sublabel: 'Average Rating' },
+        { label: '32+ Builds', sublabel: 'Shipped' },
+        { label: 'Web2 + Web3', sublabel: 'Under One Roof' },
+        { label: '98%', sublabel: 'Launch Focus' },
+        { label: '4.9/5', sublabel: 'Client Rating' },
       ].map((badge, index) => (
         <div key={index} className="text-center px-4 border-r border-border last:border-0">
           <div className="font-display text-heading-sm text-foreground">{badge.label}</div>

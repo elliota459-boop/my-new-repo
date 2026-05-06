@@ -104,13 +104,12 @@ export default function WorkPage() {
             Selected Work
           </span>
           <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-6">
-            Projects That
+            Web2 and Web3 Builds
             <br />
-            <span className="text-accent">Prove Our Claim</span>
+            <span className="text-accent">That Made It Live</span>
           </h1>
           <p className="text-body-lg text-foreground/60 max-w-2xl">
-            Every project below includes real metrics, real outcomes, and real business impact. 
-            This is what happens when strategy meets execution.
+            A mix of custom web applications, backend systems, dApps, Web3 infrastructure, AI platforms, and complex builds that moved from idea or rescue mode into production.
           </p>
         </div>
 
@@ -182,10 +181,10 @@ export default function WorkPage() {
             Want results like these?
           </h2>
           <p className="text-body text-foreground/60 mb-8 max-w-xl mx-auto">
-            Let&apos;s discuss how we can build a website that becomes your most valuable sales asset.
+            Let&apos;s discuss how we can build, rebuild, or rescue the web product your business needs to launch.
           </p>
           <Link href="/contact" className="btn-primary group">
-            Start Your Project
+            Start or Rescue Your Project
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

@@ -96,8 +96,8 @@ export default function TermsPage() {
             </h2>
             <p className="text-foreground-muted">
               For questions about these terms, contact us at{' '}
-              <Link href="mailto:hello@ibnay.studio" className="text-accent hover:text-accent-light">
-                hello@ibnay.studio
+              <Link href="mailto:info@ibnayiftribe.com" className="text-accent hover:text-accent-light">
+                info@ibnayiftribe.com
               </Link>
             </p>
           </div>

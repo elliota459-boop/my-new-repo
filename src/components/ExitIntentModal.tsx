@@ -15,6 +15,15 @@ export function ExitIntentModal() {
       return
     }
 
+    // Timer for 30 seconds delay
+    const timer = setTimeout(() => {
+      if (!hasShown) {
+        setIsVisible(true)
+        setHasShown(true)
+        sessionStorage.setItem('exitIntentShown', 'true')
+      }
+    }, 30000)
+
     let mouseY = 0
     
     const handleMouseMove = (e: MouseEvent) => {
@@ -27,6 +36,7 @@ export function ExitIntentModal() {
         setIsVisible(true)
         setHasShown(true)
         sessionStorage.setItem('exitIntentShown', 'true')
+        clearTimeout(timer)
       }
     }
 
@@ -37,6 +47,7 @@ export function ExitIntentModal() {
     }
 
     return () => {
+      clearTimeout(timer)
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseleave', handleMouseLeave)
     }
@@ -72,16 +83,15 @@ export function ExitIntentModal() {
           Before You Go...
         </h2>
         <p className="text-body-lg text-foreground/60 mb-6">
-          Get our free <strong className="text-foreground">Website Conversion Audit</strong> — 
-          a 15-point checklist that reveals exactly why your current site isn&apos;t converting.
+          Get a free <strong className="text-foreground">Project Launch Audit</strong> for your website, web app, dApp, or AI-generated prototype.
         </p>
 
         {/* Value props */}
         <ul className="space-y-3 mb-8">
           {[
-            'Identify conversion killers in 5 minutes',
-            'See what top-performing sites do differently',
-            'Get actionable fixes (no designer needed)',
+            'Find the blockers keeping your project from launch',
+            'See what should be kept, fixed, or rebuilt',
+            'Get a practical next-step plan from a web agency team',
           ].map((item, index) => (
             <li key={index} className="flex items-center gap-3 text-body text-foreground/70">
               <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
@@ -96,7 +106,7 @@ export function ExitIntentModal() {
           className="btn-primary w-full justify-center group"
           onClick={() => setIsVisible(false)}
         >
-          Get The Free Audit
+          Get The Launch Audit
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </Link>
 

@@ -9,10 +9,10 @@ import { SlotMachineNumber } from '@/components'
 gsap.registerPlugin(ScrollTrigger)
 
 const metrics = [
-  { value: 45, suffix: '+', label: 'Ecosystems', sublabel: 'Delivered' },
-  { value: 10, suffix: 'M+', prefix: '$', label: 'Client Revenue', sublabel: 'Generated' },
-  { value: 12, suffix: '+', label: 'Industries', sublabel: 'Served' },
-  { value: 95, suffix: '%', label: 'Client Retention', sublabel: 'Rate' },
+  { value: 32, suffix: '+', prefix: '', label: 'Web Builds', sublabel: 'Designed and Developed' },
+  { value: 40, suffix: '+', prefix: '', label: 'Search Intent Pages', sublabel: 'Mapped for Buyers' },
+  { value: 15, suffix: '+', prefix: '', label: 'Industries', sublabel: 'Served' },
+  { value: 98, suffix: '%', prefix: '', label: 'Clarity Focus', sublabel: 'No Vague Offers' },
 ]
 
 export function MetricsStrip() {

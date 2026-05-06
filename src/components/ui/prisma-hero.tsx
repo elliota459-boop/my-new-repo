@@ -126,7 +126,7 @@ const PrismaHero = () => {
                 className="text-sm text-foreground/80 sm:text-base md:text-lg max-w-sm"
                 style={{ lineHeight: 1.3 }}
               >
-                Full-Stack Web3 Engineering Studio. We architect complex decentralized ecosystems, custom Solidity protocols, and high-performance technical infrastructures.
+                Web design and development agency for businesses that need the right people to find them, trust them, and enquire. We build SEO-ready websites, landing pages, web apps, ecommerce, Web3 products, and rescue rebuilds that turn confused visitors into serious leads.
               </motion.p>
 
               <motion.div
@@ -138,7 +138,7 @@ const PrismaHero = () => {
                   href="/contact"
                   className="group inline-flex items-center gap-3 self-start rounded-full bg-accent px-6 py-2 text-base font-medium text-white transition-all hover:gap-4 sm:text-lg"
                 >
-                  Start a project
+                  Get a website plan
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white transition-transform group-hover:scale-110 sm:h-12 sm:w-12">
                     <ArrowRight className="h-5 w-5 text-accent" />
                   </span>

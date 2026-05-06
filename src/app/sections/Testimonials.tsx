@@ -11,38 +11,38 @@ gsap.registerPlugin(ScrollTrigger)
 
 const testimonials = [
   {
-    quote: "IBNAY didn't just build us a website. They built us a competitive weapon. Within 90 days we had 3 inbound enterprise inquiries we'd never have gotten with our old site. The strategy work alone was worth 10x what we paid.",
+    quote: 'IBNAY took over a half-built product that had been stuck for months. They cleaned the code, rebuilt the backend, fixed the launch blockers, and shipped a site our team can actually use.',
     author: 'Sarah Chen',
-    title: 'CEO',
-    company: 'Vertex AI',
+    title: 'Founder',
+    company: 'SaaS Platform',
     image: 'SC',
   },
   {
-    quote: "I've worked with agencies for 15 years. IBNAY is the first one that actually understood our business before designing a single pixel. Our conversion rate went from 1.8% to 6.2% in 45 days.",
+    quote: 'We came with an AI-generated prototype that looked close but failed in production. IBNAY turned it into a real web app with auth, database rules, analytics, and deployment handled properly.',
     author: 'Marcus Rodriguez',
-    title: 'CMO',
-    company: 'Apex Capital',
+    title: 'Product Lead',
+    company: 'AI Tools Company',
     image: 'MR',
   },
   {
-    quote: "They refused to start designing until they understood our patient journey. That discipline is rare. The result? A 198% increase in online bookings and a site that actually builds trust with anxious patients.",
+    quote: 'They understood both the website and the Web3 logic. The wallet flow, dashboard, smart contract integration, and user education all finally felt like one product.',
     author: 'Dr. Emily Watson',
-    title: 'Director of Digital',
-    company: 'Meridian Health',
+    title: 'Operations Director',
+    company: 'Web3 Health Platform',
     image: 'EW',
   },
   {
-    quote: "Our previous agency gave us a beautiful site that nobody used. IBNAY gave us a site that converts at 4x the rate and costs less to maintain. That's the difference between decoration and engineering.",
+    quote: 'Our previous agency gave us a beautiful website that nobody on the team trusted. IBNAY rebuilt the structure, speed, forms, and backend so the site became something we could confidently send to clients.',
     author: 'James Park',
     title: 'Founder',
-    company: 'Nova Commerce',
+    company: 'Commerce Brand',
     image: 'JP',
   },
   {
-    quote: "The ROI was clear within 60 days. $85K investment, $1.2M in attributed revenue in the first quarter. IBNAY doesn't build websites. They build revenue machines.",
+    quote: 'The best part was clarity. They told us what to keep, what to rebuild, and what to postpone. That saved us weeks and got the product live without wasting budget.',
     author: 'Priya Sharma',
-    title: 'VP of Growth',
-    company: 'TechVenture',
+    title: 'VP Product',
+    company: 'EdTech Company',
     image: 'PS',
   },
 ]
@@ -79,27 +79,24 @@ export function Testimonials() {
   const current = testimonials[currentIndex]
 
   return (
-    <section 
+    <section
       ref={sectionRef}
       className="section-padding bg-surface"
     >
       <div className="w-full px-6 md:px-12 lg:px-20">
         <div ref={contentRef}>
-          {/* Section Header */}
           <div className="text-center mb-16">
             <span className="font-mono text-label text-background/50 tracking-widest uppercase block mb-4">
               From The People Who Hired Us
             </span>
             <h2 className="font-display text-display-sm md:text-display-md text-background">
-              Client Results
+              Build Results
             </h2>
           </div>
 
-          {/* Testimonial Card */}
           <div className="max-w-4xl mx-auto">
             <div className="relative bg-background rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl">
-              {/* Quote Icon with float animation */}
-              <motion.div 
+              <motion.div
                 className="absolute -top-6 left-8 md:left-12 w-12 h-12 bg-accent rounded-full flex items-center justify-center"
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
@@ -115,14 +112,12 @@ export function Testimonials() {
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  {/* Quote */}
                   <blockquote className="font-display text-heading-sm md:text-heading-md text-foreground leading-relaxed mb-10">
                     &ldquo;{current.quote}&rdquo;
                   </blockquote>
 
-                  {/* Author */}
                   <div className="flex items-center gap-4">
-                    <motion.div 
+                    <motion.div
                       className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center"
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -146,7 +141,6 @@ export function Testimonials() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Navigation with Magnetic buttons */}
               <div className="flex items-center gap-4 mt-10 pt-8 border-t border-border">
                 <Magnetic strength={0.3}>
                   <motion.button
@@ -172,7 +166,7 @@ export function Testimonials() {
                     <ChevronRight className="w-5 h-5" />
                   </motion.button>
                 </Magnetic>
-                <motion.div 
+                <motion.div
                   className="ml-auto font-mono text-label text-foreground/40"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}

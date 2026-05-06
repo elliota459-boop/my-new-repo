@@ -16,13 +16,13 @@ export function Footer() {
               IBNAY
             </Link>
             <p className="mt-4 text-body text-foreground/60 max-w-xs">
-              Full-Stack Web3 Engineering Studio. We architect complex decentralized ecosystems and institutional-grade technical infrastructures.
+              Web design and development agency for SEO-ready websites, lead generation landing pages, custom web apps, Web3 products, and rescue rebuilds.
             </p>
           </div>
 
           {/* Navigation Column */}
-          <div className="md:col-span-3 md:col-start-6">
-            <div className="font-mono text-label text-foreground/40 mb-6">Navigation</div>
+          <div className="md:col-span-3">
+            <div className="font-mono text-label text-foreground/40 mb-6">Navigate</div>
             <ul className="space-y-3">
               <li>
                 <Link href="/work" className="text-body text-foreground/70 hover:text-accent transition-colors">
@@ -62,50 +62,70 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Address Column */}
           <div className="md:col-span-3">
-            <div className="font-mono text-label text-foreground/40 mb-6">Contact</div>
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href="mailto:hello@ibnay.studio" 
-                  className="text-body text-foreground/70 hover:text-accent transition-colors"
+            <div className="font-mono text-label text-foreground/40 mb-6">Address</div>
+            <p className="text-body text-foreground/70 leading-relaxed">
+              Harju maakond, Tallinn,<br />
+              Kesklinna linnaosa,<br />
+              Tartu mnt 67/1-13b, 10115
+            </p>
+          </div>
+
+          {/* Contact Column */}
+          <div className="md:col-span-2">
+            <div className="font-mono text-label text-foreground/40 mb-6">Contacts</div>
+            <div className="space-y-6">
+              <div>
+                <div className="text-[10px] font-mono uppercase tracking-wider text-foreground/30 mb-1">E-mail</div>
+                <a
+                  href="mailto:info@ibnayiftribe.com"
+                  className="text-body text-foreground/70 hover:text-accent transition-colors block"
                 >
-                  hello@ibnay.studio
+                  info@ibnayiftribe.com
                 </a>
-              </li>
-              <li>
-                <a 
-                  href="tel:+919876543210" 
-                  className="text-body text-foreground/70 hover:text-accent transition-colors"
-                >
-                  +91 98765 43210
-                </a>
-              </li>
-            </ul>
-            
+              </div>
+              <div>
+                <div className="text-[10px] font-mono uppercase tracking-wider text-foreground/30 mb-1">Mobile</div>
+                <div className="space-y-1">
+                  <a
+                    href="tel:+917861010850"
+                    className="text-body text-foreground/70 hover:text-accent transition-colors block"
+                  >
+                    +91 78610 10850
+                  </a>
+                  <a
+                    href="tel:+37254185107"
+                    className="text-body text-foreground/70 hover:text-accent transition-colors block"
+                  >
+                    +372 5418 5107
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="flex items-center gap-4 mt-6">
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
+              <a
+                href="https://linkedin.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/50 hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
+              <a
+                href="https://instagram.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/50 hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a 
-                href="https://dribbble.com" 
-                target="_blank" 
+              <a
+                href="https://dribbble.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/50 hover:text-accent transition-colors"
                 aria-label="Dribbble"
@@ -119,7 +139,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-label text-foreground/40">
-            © {currentYear} IBNAY Digital Studio. All rights reserved.
+            Copyright {currentYear} IBNAY Digital Studio. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="font-mono text-label text-foreground/40 hover:text-foreground/70 transition-colors">
@@ -130,10 +150,10 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        
+
         <div className="text-center mt-8">
           <p className="font-mono text-label text-foreground/30">
-            Designed with obsession. Built with intention.
+            Built for Google intent. Designed for trust. Engineered for qualified leads.
           </p>
         </div>
       </div>
