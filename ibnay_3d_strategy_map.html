@@ -1,0 +1,185 @@
+
+<style>
+  .wrap { padding: 1rem 0; font-family: var(--font-sans); }
+  .section-row { display: flex; gap: 12px; margin-bottom: 10px; align-items: flex-start; }
+  .tag { font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .tag-must { background: var(--color-background-danger); color: var(--color-text-danger); }
+  .tag-strong { background: var(--color-background-warning); color: var(--color-text-warning); }
+  .tag-nice { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .section-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; flex: 1; }
+  .section-name { font-size: 13px; font-weight: 500; margin: 0 0 4px; }
+  .section-desc { font-size: 12px; color: var(--color-text-secondary); margin: 0 0 8px; }
+  .tools-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tool-badge { font-size: 11px; padding: 2px 7px; border-radius: 4px; border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); }
+  .interaction-line { font-size: 11px; color: var(--color-text-tertiary); display: flex; gap: 4px; align-items: flex-start; margin-bottom: 3px; }
+  .interaction-line::before { content: "→"; flex-shrink: 0; }
+  .group-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin: 20px 0 8px; }
+  .legend { display: flex; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+  .tool-stack { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 10px; }
+  .tool-name { font-size: 14px; font-weight: 500; margin: 0 0 4px; }
+  .tool-desc { font-size: 12px; color: var(--color-text-secondary); margin: 0; }
+  .tab-row { display: flex; gap: 4px; margin-bottom: 16px; }
+  .tab { font-size: 12px; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+  .tab.active { background: var(--color-background-secondary); color: var(--color-text-primary); font-weight: 500; border-color: var(--color-border-primary); }
+</style>
+<div class="wrap">
+  <div class="tab-row">
+    <button class="tab active" onclick="show('sections',this)">3D sections plan</button>
+    <button class="tab" onclick="show('tools',this)">Tool stack</button>
+    <button class="tab" onclick="show('rules',this)">Golden rules</button>
+  </div>
+
+  <div id="sections">
+    <div class="legend">
+      <div class="legend-item"><span class="tag tag-must">Must have</span> High impact</div>
+      <div class="legend-item"><span class="tag tag-strong">Strong</span> Good ROI</div>
+      <div class="legend-item"><span class="tag tag-nice">Nice to have</span> Enhancement</div>
+    </div>
+
+    <div class="group-label">Homepage</div>
+
+    <div class="section-row">
+      <span class="tag tag-must">Must have</span>
+      <div class="section-card">
+        <p class="section-name">Hero — 3D floating object</p>
+        <p class="section-desc">A violet abstract geometry (crystal, sphere, or torus) rotates slowly in the background. Responds to mouse movement with a subtle parallax shift.</p>
+        <div class="interaction-line">Cursor moves → object tilts 8–12° in that direction</div>
+        <div class="interaction-line">Scroll down → object drifts up and fades out</div>
+        <div class="tools-row"><span class="tool-badge">Spline</span><span class="tool-badge">Webflow embed</span></div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <span class="tag tag-strong">Strong</span>
+      <div class="section-card">
+        <p class="section-name">Services cards — 3D tilt on hover</p>
+        <p class="section-desc">Each service card physically tilts toward the cursor when hovered, with a gloss/shine effect that moves across the surface. CSS 3D transforms — no extra tool needed.</p>
+        <div class="interaction-line">Hover → card tilts 10° on X+Y axis toward cursor</div>
+        <div class="interaction-line">Shine overlay moves opposite to tilt direction</div>
+        <div class="tools-row"><span class="tool-badge">CSS transform3d</span><span class="tool-badge">Webflow interactions</span></div>
+      </div>
+    </div>
+
+    <div class="section-row">
+      <span class="tag tag-nice">Nice to have</span>
+      <div class="section-card">
+        <p class="section-name">Metrics strip — 3D counter reveal</p>
+        <p class="section-desc">Numbers scroll into view with a slot-machine style flip in 3D (rotating on X-axis) when the section enters the viewport.</p>
+        <div class="interaction-line">Section enters view → digits flip from 000 to final value</div>
+        <div class="tools-row"><span class="tool-badge">Webflow interactions</span></div>
+      </div>
+    </div>
+
+    <div class="group-label">Work / Portfolio</div>
+
+    <div class="section-row">
+      <span class="tag tag-must">Must have</span>
+      <div class="section-card">
+        <p class="section-name">Project cards — depth on hover</p>
+        <p class="section-desc">Project cards lift up in 3D with a shadow that deepens, while the image scales slightly. Creates a "picking up a card" sensation.</p>
+        <div class="interaction-line">Hover → card translates -12px on Z (scale up), shadow spreads</div>
+        <div class="interaction-line">Image inside scales 1.05× independently</div>
+        <div class="tools-row"><span class="tool-badge">CSS transform3d</span><span class="tool-badge">Webflow interactions</span><span class="tool-badge">Framer</span></div>
+      </div>
+    </div>
+
+    <div class="group-label">Process page</div>
+
+    <div class="section-row">
+      <span class="tag tag-strong">Strong</span>
+      <div class="section-card">
+        <p class="section-name">Timeline — 3D path animation</p>
+        <p class="section-desc">The 5-phase timeline is visualised as a 3D path/ribbon that extends into the screen. As you scroll, each phase "comes toward you" from the depth.</p>
+        <div class="interaction-line">Scroll → next phase moves from far-depth to foreground</div>
+        <div class="interaction-line">Active phase is full opacity, others are receded and dim</div>
+        <div class="tools-row"><span class="tool-badge">Spline</span><span class="tool-badge">Webflow scroll trigger</span></div>
+      </div>
+    </div>
+
+    <div class="group-label">Contact page</div>
+
+    <div class="section-row">
+      <span class="tag tag-nice">Nice to have</span>
+      <div class="section-card">
+        <p class="section-name">Form — layered depth background</p>
+        <p class="section-desc">Behind the contact form, 3–4 translucent planes float at different depths, slowly drifting. Creates a sense of space without distracting from the form.</p>
+        <div class="interaction-line">Planes move at different parallax speeds on scroll</div>
+        <div class="interaction-line">Each plane has a subtle violet gradient and 2–4% opacity</div>
+        <div class="tools-row"><span class="tool-badge">Spline</span><span class="tool-badge">CSS 3D</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="tools" style="display:none">
+    <div class="group-label">Recommended no-code stack</div>
+    <div class="tool-stack">
+      <p class="tool-name">1. Spline — 3D objects & scenes</p>
+      <p class="tool-desc">This is where you design the hero 3D object, the timeline ribbon, and any floating elements. It exports a single embed code you paste into Webflow or Framer. Free plan is enough to start. spline.design</p>
+    </div>
+    <div class="tool-stack">
+      <p class="tool-name">2. Webflow — site builder + animations</p>
+      <p class="tool-desc">Build the full site here. Handles the CSS 3D card tilts, scroll triggers, counter animations, and transitions natively. Paste Spline embeds as HTML components. Best choice for a professional agency site.</p>
+    </div>
+    <div class="tool-stack">
+      <p class="tool-name">3. Framer — alternative to Webflow</p>
+      <p class="tool-desc">If your team prefers a more design-tool feel (closer to Figma). Has built-in 3D tilt components and Spline integration. Slightly less control than Webflow for custom layouts.</p>
+    </div>
+    <div class="tool-stack">
+      <p class="tool-name">4. Lottie / Rive — micro-animations</p>
+      <p class="tool-desc">For icon animations, button hover effects, and the preloader. Both work inside Webflow and Framer with no code. Use Rive for interactive animations, Lottie for one-shot playback.</p>
+    </div>
+
+    <div class="group-label">Recommended workflow</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div class="section-card"><p class="section-name" style="margin:0">Step 1 → Design 3D hero in Spline first</p></div>
+      <div class="section-card"><p class="section-name" style="margin:0">Step 2 → Build full layout in Webflow</p></div>
+      <div class="section-card"><p class="section-name" style="margin:0">Step 3 → Embed Spline scenes as iframes</p></div>
+      <div class="section-card"><p class="section-name" style="margin:0">Step 4 → Add scroll triggers + card tilts in Webflow interactions</p></div>
+      <div class="section-card"><p class="section-name" style="margin:0">Step 5 → Add Rive micro-animations last</p></div>
+    </div>
+  </div>
+
+  <div id="rules" style="display:none">
+    <div class="group-label">Performance rules for 3D</div>
+    <div class="section-row" style="margin-bottom:8px">
+      <div class="section-card">
+        <p class="section-name">Keep Spline scenes under 5MB</p>
+        <p class="section-desc">Heavy 3D scenes will destroy your Lighthouse score. The hero object should be simple geometry — a sphere, torus, or crystal. No complex meshes. Use Spline's export size setting.</p>
+      </div>
+    </div>
+    <div class="section-row" style="margin-bottom:8px">
+      <div class="section-card">
+        <p class="section-name">Use CSS 3D wherever possible</p>
+        <p class="section-desc">Card tilts, lifts, and depth effects can all be done with CSS transform3d. These are GPU-accelerated and have zero performance cost vs WebGL Spline scenes.</p>
+      </div>
+    </div>
+    <div class="section-row" style="margin-bottom:8px">
+      <div class="section-card">
+        <p class="section-name">Lazy-load all Spline embeds</p>
+        <p class="section-desc">Don't load the 3D scene until the user scrolls near it. Webflow and Framer both support lazy iframe loading. This keeps your First Contentful Paint under 1.5s target.</p>
+      </div>
+    </div>
+    <div class="section-row" style="margin-bottom:8px">
+      <div class="section-card">
+        <p class="section-name">One hero 3D scene max per page</p>
+        <p class="section-desc">More than one heavy WebGL context on a page compounds performance issues. Use CSS 3D for everything else. The WOW moment should be the hero — not everywhere.</p>
+      </div>
+    </div>
+    <div class="section-row" style="margin-bottom:8px">
+      <div class="section-card">
+        <p class="section-name">Disable motion for accessibility</p>
+        <p class="section-desc">Wrap every 3D animation with a prefers-reduced-motion check. Webflow has a global setting for this. It's one checkbox — always enable it.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function show(id, btn) {
+  ['sections','tools','rules'].forEach(s => {
+    document.getElementById(s).style.display = s === id ? 'block' : 'none';
+  });
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
