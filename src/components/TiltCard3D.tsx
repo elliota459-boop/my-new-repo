@@ -137,7 +137,7 @@ export function LiftCard3D({
         style={{
           transformStyle: 'preserve-3d',
           boxShadow: isHovered 
-            ? '0 25px 50px -12px rgba(124, 58, 237, 0.25), 0 0 0 1px rgba(124, 58, 237, 0.1)'
+            ? '0 25px 50px -12px rgba(44, 191, 174, 0.25), 0 0 0 1px rgba(44, 191, 174, 0.1)'
             : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
         }}
       >

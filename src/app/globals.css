@@ -3,43 +3,44 @@
 @tailwind utilities;
 
 /* 
-  SOPHISTICATED DARK PALETTE
+  SOFT WEB AGENCY PALETTE
   - Background: Deep charcoal (easier on eyes than pure black)
-  - Accent: Vibrant violet-purple (differentiated from generic blue)
+  - Accent: Calm teal (trustworthy, modern, easier on the eye)
   - Surface: Off-white/cream for contrast sections
-  - Gradients: Multi-layered depth with subtle warm tones
+  - Gradients: Muted depth with restrained color
 */
 :root {
   /* Primary Dark Palette */
-  --color-background: #0A0A0F;
-  --color-background-elevated: #12121A;
-  --color-background-card: #161622;
+  --color-background: #0B0F12;
+  --color-background-elevated: #12181C;
+  --color-background-card: #151D22;
   
   /* Text Colors */
   --color-foreground: #F5F5F7;
   --color-foreground-muted: #A1A1AA;
   --color-foreground-subtle: #71717A;
   
-  /* Accent - Vibrant Violet-Purple (Differentiated) */
-  --color-accent: #7C3AED;
-  --color-accent-light: #A78BFA;
-  --color-accent-dark: #5B21B6;
-  --color-accent-muted: rgba(124, 58, 237, 0.15);
+  /* Accent - Calm Teal */
+  --color-accent: #2CBFAE;
+  --color-accent-light: #77D6CB;
+  --color-accent-dark: #178D82;
+  --color-accent-muted: rgba(44, 191, 174, 0.15);
+  --accent: 44, 191, 174;
   
   /* Secondary Accents */
-  --color-warm: #F59E0B;
-  --color-success: #10B981;
+  --color-warm: #DDA15E;
+  --color-success: #4FB286;
   --color-error: #EF4444;
   
   /* Surface & Borders */
   --color-surface: #FAFAF9;
-  --color-surface-dark: #13131F;
-  --color-border: #27273A;
-  --color-border-light: #3F3F55;
+  --color-surface-dark: #11191D;
+  --color-border: #253137;
+  --color-border-light: #3B4A51;
   
   /* Gradient Stops */
-  --gradient-start: rgba(124, 58, 237, 0.15);
-  --gradient-mid: rgba(167, 139, 250, 0.08);
+  --gradient-start: rgba(44, 191, 174, 0.14);
+  --gradient-mid: rgba(119, 214, 203, 0.08);
   --gradient-end: transparent;
 }
 
@@ -166,7 +167,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 5px 20px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 5px 20px rgba(44, 191, 174, 0.25);
 }
 
 .btn-outline {

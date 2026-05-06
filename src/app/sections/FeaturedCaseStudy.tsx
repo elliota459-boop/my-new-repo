@@ -52,7 +52,7 @@ export function FeaturedCaseStudy() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Visual */}
           <div className="relative">
-            <div className="aspect-[4/3] bg-gradient-to-br from-violet-900/40 via-purple-900/30 to-indigo-900/40 rounded-lg border border-border overflow-hidden relative">
+            <div className="aspect-[4/3] bg-gradient-to-br from-teal-900/40 via-slate-900/30 to-cyan-900/40 rounded-lg border border-border overflow-hidden relative">
               {/* Mock UI */}
               <div className="absolute inset-8 bg-background/90 rounded-lg p-6 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">

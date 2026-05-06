@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, animate } from 'framer-motion'
 
 interface SlotMachineNumberProps {
@@ -20,56 +20,28 @@ export function SlotMachineNumber({
 }: SlotMachineNumberProps) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.5 })
-  const [displayValue, setDisplayValue] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const [displayValue, setDisplayValue] = useState(value)
+  const hasAnimated = useRef(false)
 
   useEffect(() => {
-    if (isInView && !isAnimating) {
-      setIsAnimating(true)
-      
-      // Animate from 0 to value
-      const controls = animate(0, value, {
-        duration,
-        ease: 'easeOut',
-        onUpdate: (latest) => {
-          setDisplayValue(Math.round(latest))
-        },
-        onComplete: () => {
-          setIsAnimating(false)
-        }
-      })
+    if (!isInView || hasAnimated.current) return
 
-      return () => controls.stop()
-    }
-  }, [isInView, value, duration, isAnimating])
+    hasAnimated.current = true
 
-  // Convert number to array of digits for 3D flip effect
-  const digits = displayValue.toString().split('').map(Number)
-  
+    const controls = animate(value * 0.82, value, {
+      duration,
+      ease: 'easeOut',
+      onUpdate: (latest) => setDisplayValue(Math.round(latest)),
+      onComplete: () => setDisplayValue(value),
+    })
+
+    return () => controls.stop()
+  }, [isInView, value, duration])
+
   return (
-    <div ref={ref} className={`font-display ${className}`}>
+    <div ref={ref} className={`font-display tabular-nums text-accent ${className}`}>
       <span className="text-accent">{prefix}</span>
-      <div className="inline-flex">
-        {digits.map((digit, index) => (
-          <motion.span
-            key={`${index}-${digit}`}
-            className="inline-block"
-            initial={{ rotateX: -90, opacity: 0 }}
-            animate={isInView ? { rotateX: 0, opacity: 1 } : { rotateX: -90, opacity: 0 }}
-            transition={{ 
-              duration: 0.4, 
-              delay: index * 0.1,
-              ease: [0.22, 1, 0.36, 1]
-            }}
-            style={{ 
-              transformStyle: 'preserve-3d',
-              transformOrigin: 'center bottom'
-            }}
-          >
-            {digit}
-          </motion.span>
-        ))}
-      </div>
+      <span>{displayValue}</span>
       <span className="text-accent">{suffix}</span>
     </div>
   )

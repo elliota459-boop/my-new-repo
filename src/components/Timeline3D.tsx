@@ -20,7 +20,7 @@ interface Timeline3DProps {
 export function Timeline3D({ phases, className = '' }: Timeline3DProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"]
@@ -43,29 +43,29 @@ export function Timeline3D({ phases, className = '' }: Timeline3DProps) {
   return (
     <div ref={containerRef} className={`relative ${className}`}>
       {/* 3D Ribbon Background */}
-      <div 
+      <div
         className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"
         style={{
-          background: 'linear-gradient(180deg, rgba(124, 58, 237, 0.3) 0%, rgba(167, 139, 250, 0.1) 50%, rgba(124, 58, 237, 0.3) 100%)',
+          background: 'linear-gradient(180deg, rgba(44, 191, 174, 0.3) 0%, rgba(119, 214, 203, 0.1) 50%, rgba(44, 191, 174, 0.3) 100%)',
           transform: 'translateX(-50%) perspective(1000px) rotateY(45deg)',
           transformStyle: 'preserve-3d',
         }}
       />
-      
+
       {/* Progress indicator on ribbon */}
-      <motion.div 
+      <motion.div
         className="absolute left-1/2 top-0 w-3 -translate-x-1/2 rounded-full bg-accent"
         style={{
           height: useTransform(scrollYProgress, [0, 1], ['0%', '100%']),
           transform: 'translateX(-50%) perspective(1000px) rotateY(45deg)',
-          boxShadow: '0 0 20px rgba(124, 58, 237, 0.5)',
+          boxShadow: '0 0 20px rgba(44, 191, 174, 0.5)',
         }}
       />
 
       {/* Phases */}
       <div className="space-y-32 py-20">
         {phases.map((phase, index) => (
-          <TimelinePhaseCard 
+          <TimelinePhaseCard
             key={index}
             phase={phase}
             index={index}
@@ -86,7 +86,7 @@ interface TimelinePhaseCardProps {
 function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
-  
+
   // 3D depth values based on position
   const depth = index % 2 === 0 ? 50 : -50 // Alternate sides
   const rotateY = index % 2 === 0 ? -5 : 5 // Slight rotation
@@ -97,8 +97,8 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
       className={`relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${
         index % 2 === 0 ? '' : 'lg:direction-rtl'
       }`}
-      initial={{ 
-        opacity: 0, 
+      initial={{
+        opacity: 0,
         z: -100,
         rotateY: rotateY,
       }}
@@ -111,12 +111,12 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
         z: -100,
         rotateY: rotateY,
       }}
-      transition={{ 
-        duration: 0.8, 
+      transition={{
+        duration: 0.8,
         ease: [0.22, 1, 0.36, 1],
         delay: 0.1
       }}
-      style={{ 
+      style={{
         transformStyle: 'preserve-3d',
         perspective: 1000,
       }}
@@ -129,9 +129,9 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
           }`}
           animate={{
             scale: isActive ? 1.1 : 1,
-            boxShadow: isActive 
-              ? '0 0 40px rgba(124, 58, 237, 0.4)' 
-              : '0 0 0 rgba(124, 58, 237, 0)',
+            boxShadow: isActive
+              ? '0 0 40px rgba(44, 191, 174, 0.4)'
+              : '0 0 0 rgba(44, 191, 174, 0)',
           }}
           transition={{ duration: 0.5 }}
           style={{
@@ -141,7 +141,7 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
           <span className={`font-display text-2xl ${isActive ? 'text-white' : 'text-foreground-muted'}`}>
             {phase.number}
           </span>
-          
+
           {/* Glow ring */}
           {isActive && (
             <motion.div
@@ -163,13 +163,13 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
           }}
           animate={{
             boxShadow: isActive
-              ? '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(124, 58, 237, 0.2)'
+              ? '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(44, 191, 174, 0.2)'
               : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
           }}
         >
           {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          
+
           <div className="relative z-10">
             {/* Header */}
             <div className="flex flex-wrap items-center gap-4 mb-4">
@@ -178,9 +178,9 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
                 {phase.duration}
               </span>
             </div>
-            
+
             <p className="text-foreground-muted mb-6 leading-relaxed">{phase.description}</p>
-            
+
             {/* Deliverables */}
             <div className="mb-6">
               <h4 className="font-mono text-sm text-foreground-subtle mb-3 uppercase tracking-wider">
@@ -195,11 +195,11 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
                 ))}
               </ul>
             </div>
-            
+
             {/* Tools */}
             <div className="flex flex-wrap gap-2">
               {phase.tools.map((tool, i) => (
-                <span 
+                <span
                   key={i}
                   className="px-2 py-1 bg-background-elevated text-foreground-subtle text-xs font-mono rounded"
                 >

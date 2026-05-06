@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { MobileMenu } from './MobileMenu'
 
@@ -35,8 +36,15 @@ export function Navigation() {
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="font-display text-xl md:text-2xl text-foreground tracking-tight hover:text-accent transition-colors">
-              IBNAY
+            <Link href="/" className="relative block h-9 w-28 md:h-10 md:w-32" aria-label="IBNAY home">
+              <Image
+                src="/brand/ibnay-header-logo.png"
+                alt="IBNAY"
+                fill
+                priority
+                sizes="(max-width: 768px) 112px, 128px"
+                className="object-contain object-left"
+              />
             </Link>
 
             {/* Desktop Navigation */}

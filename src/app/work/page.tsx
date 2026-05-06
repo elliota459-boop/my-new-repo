@@ -18,8 +18,8 @@ const projects = [
     service: 'Full-Stack Web3 Infrastructure',
     metric: '↑ 28% Growth in Active TVL',
     description: 'Engineered a comprehensive referral staking architecture on BSC. From Solidity smart contracts to high-frequency backend systems.',
-    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800&h=600',
-    color: 'from-violet-600/30 to-purple-600/30',
+    image: 'https://images.pexels.com/photos/8145328/pexels-photo-8145328.jpeg?auto=compress&cs=tinysrgb&w=900',
+    color: 'from-teal-600/30 to-cyan-600/30',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const projects = [
     service: 'Ecosystem & Backend Architecture',
     metric: '↑ 15% Operational Efficiency',
     description: 'Developed the entire backend and smart contract infrastructure for a multi-layered agri-fintech ecosystem.',
-    image: 'https://images.unsplash.com/photo-1595113316349-9fa4eb24f884?auto=format&fit=crop&q=80&w=800&h=600',
+    image: 'https://images.pexels.com/photos/5230983/pexels-photo-5230983.jpeg?auto=compress&cs=tinysrgb&w=900',
     color: 'from-emerald-600/30 to-teal-600/30',
   },
   {
@@ -38,7 +38,7 @@ const projects = [
     service: 'Decentralized Exchange Infrastructure',
     metric: '↑ 12% Trading Velocity',
     description: 'Architected a decentralized trading platform featuring auto-matching queues and instant settlements.',
-    image: 'https://images.unsplash.com/photo-1642104704074-907c0698cbd9?auto=format&fit=crop&q=80&w=800&h=600',
+    image: 'https://images.pexels.com/photos/6158761/pexels-photo-6158761.jpeg?auto=compress&cs=tinysrgb&w=900',
     color: 'from-amber-600/30 to-orange-600/30',
   },
   {
@@ -48,8 +48,8 @@ const projects = [
     service: 'Proprietary AI Modeling',
     metric: '↑ 8% Platform Retention',
     description: 'Under strict NDA, we developed complex AI-driven modeling and large-scale EdTech infrastructures.',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=600',
-    color: 'from-rose-600/30 to-pink-600/30',
+    image: 'https://images.pexels.com/photos/7777679/pexels-photo-7777679.jpeg?auto=compress&cs=tinysrgb&w=900',
+    color: 'from-teal-600/30 to-slate-600/30',
   },
 ]
 

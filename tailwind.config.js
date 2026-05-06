@@ -9,9 +9,9 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          DEFAULT: '#0A0A0F',
-          elevated: '#12121A',
-          card: '#161622',
+          DEFAULT: '#0B0F12',
+          elevated: '#12181C',
+          card: '#151D22',
         },
         foreground: {
           DEFAULT: '#F5F5F7',
@@ -19,20 +19,20 @@ module.exports = {
           subtle: '#71717A',
         },
         accent: {
-          DEFAULT: '#7C3AED',
-          light: '#A78BFA',
-          dark: '#5B21B6',
-          muted: 'rgba(124, 58, 237, 0.15)',
+          DEFAULT: '#2CBFAE',
+          light: '#77D6CB',
+          dark: '#178D82',
+          muted: 'rgba(44, 191, 174, 0.15)',
         },
-        warm: '#F59E0B',
-        success: '#10B981',
+        warm: '#DDA15E',
+        success: '#4FB286',
         surface: {
           DEFAULT: '#FAFAF9',
-          dark: '#13131F',
+          dark: '#11191D',
         },
         border: {
-          DEFAULT: '#27273A',
-          light: '#3F3F55',
+          DEFAULT: '#253137',
+          light: '#3B4A51',
         },
       },
       fontFamily: {

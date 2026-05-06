@@ -28,6 +28,11 @@ const budgetRanges = [
   '$250K+',
 ]
 
+const enquiryInbox = 'info@ibnayiftibe.com'
+
+const encodeForm = (data: Record<string, string>) =>
+  new URLSearchParams(data).toString()
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -75,15 +80,16 @@ export default function ContactPage() {
     setIsSubmitting(true)
 
     try {
-      const formDataObj = new FormData()
-      formDataObj.append('form-name', 'contact')
-      Object.entries(formData).forEach(([key, value]) => {
-        formDataObj.append(key, value)
-      })
-
       const response = await fetch('/', {
         method: 'POST',
-        body: formDataObj,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encodeForm({
+          'form-name': 'contact',
+          enquiryInbox,
+          ...formData,
+        }),
       })
 
       if (response.ok) {
@@ -99,7 +105,7 @@ export default function ContactPage() {
         throw new Error('Submission failed')
       }
     } catch (error) {
-      alert('Something went wrong. Please try again or email us directly at info@ibnayiftribe.com')
+      alert(`Something went wrong. Please try again or email us directly at ${enquiryInbox}`)
     } finally {
       setIsSubmitting(false)
     }
@@ -158,13 +164,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <a href="mailto:info@ibnayiftribe.com" className="flex items-center gap-4 group">
+              <a href={`mailto:${enquiryInbox}`} className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-display text-heading-sm text-foreground group-hover:text-accent transition-colors">Email Us</h3>
-                  <p className="text-body text-foreground/60">info@ibnayiftribe.com</p>
+                  <p className="text-body text-foreground/60">{enquiryInbox}</p>
                 </div>
               </a>
 
@@ -208,9 +214,10 @@ export default function ContactPage() {
               netlify-honeypot="bot-field"
             >
               <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="enquiryInbox" value={enquiryInbox} />
               <p className="hidden">
                 <label>
-                  Don’t fill this out if you’re human: <input name="bot-field" />
+                  Do not fill this out if you are human: <input name="bot-field" />
                 </label>
               </p>
               {/* Name */}

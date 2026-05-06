@@ -130,7 +130,7 @@ export function MobileMenu() {
                 className="absolute bottom-12 left-0 right-0 text-center"
               >
                 <p className="font-mono text-label text-foreground/40">
-                  info@ibnayiftribe.com
+                  info@ibnayiftibe.com
                 </p>
               </motion.div>
             </div>
