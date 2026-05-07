@@ -36,13 +36,13 @@ export function Navigation() {
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="relative block h-7 w-24 md:h-8 md:w-28" aria-label="IBNAY home">
+            <Link href="/" className="relative block h-10 w-32 md:h-12 md:w-40" aria-label="IBNAY home">
               <Image
                 src="/brand/logo.png"
                 alt="IBNAY"
                 fill
                 priority
-                sizes="(max-width: 768px) 96px, 112px"
+                sizes="(max-width: 768px) 128px, 160px"
                 className="object-contain object-left"
               />
             </Link>
