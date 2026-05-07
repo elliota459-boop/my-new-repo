@@ -13,12 +13,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
           {/* Brand Column */}
           <div className="md:col-span-4">
-            <Link href="/" className="relative block h-32 w-32 md:h-36 md:w-36" aria-label="IBNAY home">
+            <Link href="/" className="relative block h-24 w-48 md:h-28 md:w-56" aria-label="IBNAY home">
               <Image
-                src="/brand/ibnay-footer-logo.png"
-                alt="IBNAY IFTRIBE"
+                src="/brand/logo.png"
+                alt="IBNAY"
                 fill
-                sizes="(max-width: 768px) 128px, 144px"
+                sizes="(max-width: 768px) 192px, 224px"
                 className="object-contain object-left"
               />
             </Link>
