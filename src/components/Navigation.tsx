@@ -30,19 +30,19 @@ export function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? 'nav-glass py-4' : 'bg-transparent py-6'
+          isScrolled ? 'nav-glass py-2' : 'bg-transparent py-3'
         }`}
       >
         <div className="w-full px-6 md:px-12 lg:px-20">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="relative block h-9 w-28 md:h-10 md:w-32" aria-label="IBNAY home">
+            <Link href="/" className="relative block h-7 w-24 md:h-8 md:w-28" aria-label="IBNAY home">
               <Image
-                src="/brand/ibnay-header-logo.png"
+                src="/brand/logo.png"
                 alt="IBNAY"
                 fill
                 priority
-                sizes="(max-width: 768px) 112px, 128px"
+                sizes="(max-width: 768px) 96px, 112px"
                 className="object-contain object-left"
               />
             </Link>

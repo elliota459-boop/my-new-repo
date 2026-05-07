@@ -166,12 +166,6 @@ export function Footer() {
             </Link>
           </div>
         </div>
-
-        <div className="text-center mt-8">
-          <p className="font-mono text-label text-foreground/30">
-            Built for Google intent. Designed for trust. Engineered for qualified leads.
-          </p>
-        </div>
       </div>
     </footer>
   )
