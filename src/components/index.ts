@@ -1,0 +1,33 @@
+// Animation Components
+export { AnimationProvider } from './AnimationProvider'
+export { MotionSection } from './MotionSection'
+export { MotionDiv } from './MotionDiv'
+export { AnimatedText, AnimatedHeading } from './AnimatedText'
+export { FloatingElement, Magnetic, Parallax, StaggerContainer, StaggerItem } from './FloatingElement'
+export { RevealImage, HoverImage, MaskReveal } from './RevealImage'
+export { GlowEffect, Pulse, Breathe, GradientShift, Shimmer, Ripple } from './GlowEffect'
+export { ScrollReveal, HorizontalScrollText, RotateOnScroll, ScaleOnScroll, ParallaxLayer, TextRevealScroll } from './ScrollReveal'
+
+// 3D Components (from strategy doc)
+export { TiltCard3D, LiftCard3D } from './TiltCard3D'
+export { FloatingObject3D } from './FloatingObject3D'
+export { SlotMachineNumber, RollingCounter } from './SlotMachineNumber'
+export { Timeline3D } from './Timeline3D'
+
+// Existing Components
+export { SmoothScroll } from './SmoothScroll'
+export { Preloader } from './Preloader'
+export { Navigation } from './Navigation'
+export { Footer } from './Footer'
+export { ExitIntentModal } from './ExitIntentModal'
+export { StickyMobileCTA } from './StickyMobileCTA'
+export { SocialProofNotifications } from './SocialProof'
+export { GoogleAnalytics, GoogleAnalyticsNoScript, MetaPixel } from './Analytics'
+export { ScrollProgress } from './ScrollProgress'
+export { VelocityScroll } from './VelocityScroll'
+export { PageTransition } from './PageTransition'
+export { TextReveal, CharReveal } from './TextReveal'
+export { TextScramble } from './TextScramble'
+export { MobileMenu } from './MobileMenu'
+export { MultiStepForm } from './MultiStepForm'
+export { ParallaxImage } from './ParallaxImage'
