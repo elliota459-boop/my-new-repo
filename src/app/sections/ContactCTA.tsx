@@ -140,11 +140,11 @@ export function ContactCTA() {
                 info@ibnayiftibe.com
               </a>
               <a
-                href="tel:+917990866163"
+                href="tel:+917861010850"
                 className="flex items-center gap-2 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +91 7990866163
+                +91 78610 10850
               </a>
             </div>
 

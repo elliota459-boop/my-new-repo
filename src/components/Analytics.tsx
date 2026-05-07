@@ -62,6 +62,10 @@ export function GoogleAnalyticsNoScript() {
 
 // Meta Pixel for Facebook/Instagram Ads
 export function MetaPixel() {
+  const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID
+
+  if (!pixelId) return null
+
   return (
     <Script id="meta-pixel" strategy="lazyOnload">
       {`
@@ -73,7 +77,7 @@ export function MetaPixel() {
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'PIXEL_ID');
+        fbq('init', '${pixelId}');
         fbq('track', 'PageView');
       `}
     </Script>

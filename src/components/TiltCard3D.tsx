@@ -21,11 +21,6 @@ export function TiltCard3D({
   const [isHovered, setIsHovered] = useState(false)
   const prefersReducedMotion = useReducedMotion()
 
-  // If user prefers reduced motion, render without 3D effects
-  if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>
-  }
-
   // Mouse position relative to card center (-0.5 to 0.5)
   const x = useMotionValue(0)
   const y = useMotionValue(0)
@@ -38,6 +33,11 @@ export function TiltCard3D({
   // Shine position (opposite to tilt)
   const shineX = useTransform(rotateY, [-tiltAmount, tiltAmount], ['0%', '100%'])
   const shineY = useTransform(rotateX, [tiltAmount, -tiltAmount], ['0%', '100%'])
+
+  // If user prefers reduced motion, render without 3D effects
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>
+  }
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return

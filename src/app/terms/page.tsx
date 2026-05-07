@@ -88,7 +88,7 @@ export default function TermsPage() {
               8. Limitation of Liability
             </h2>
             <p className="text-foreground-muted">
-              IBNAY's liability is limited to the total amount paid for the specific project. We are not liable for indirect, consequential, or incidental damages.
+              IBNAY&apos;s liability is limited to the total amount paid for the specific project. We are not liable for indirect, consequential, or incidental damages.
             </p>
 
             <h2 className="font-display text-2xl text-foreground mt-8 mb-4">

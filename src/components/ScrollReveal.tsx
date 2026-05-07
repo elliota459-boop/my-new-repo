@@ -200,33 +200,57 @@ export function TextRevealScroll({ text, className = '' }: TextRevealScrollProps
   })
 
   const words = text.split(' ')
+  const totalChars = words.reduce((acc, word) => acc + word.length, 0)
 
   return (
     <div ref={ref} className={className}>
-      {words.map((word, wordIndex) => (
-        <span key={wordIndex} className="inline-block mr-[0.25em]">
-          {word.split('').map((char, charIndex) => {
-            const totalChars = words.reduce((acc, w) => acc + w.length, 0)
-            const charProgress = (wordIndex * words[0].length + charIndex) / totalChars
-            
-            const charOpacity = useTransform(
-              scrollYProgress,
-              [charProgress * 0.8, charProgress * 0.8 + 0.2],
-              [0.1, 1]
-            )
-            
-            return (
-              <motion.span
+      {words.map((word, wordIndex) => {
+        const startOffset = words
+          .slice(0, wordIndex)
+          .reduce((acc, previousWord) => acc + previousWord.length, 0)
+
+        return (
+          <span key={wordIndex} className="inline-block mr-[0.25em]">
+            {word.split('').map((char, charIndex) => (
+              <TextRevealCharacter
                 key={charIndex}
-                className="inline-block"
-                style={{ opacity: charOpacity }}
-              >
-                {char}
-              </motion.span>
-            )
-          })}
-        </span>
-      ))}
+                char={char}
+                charIndex={startOffset + charIndex}
+                scrollYProgress={scrollYProgress}
+                totalChars={totalChars}
+              />
+            ))}
+          </span>
+        )
+      })}
     </div>
+  )
+}
+
+function TextRevealCharacter({
+  char,
+  charIndex,
+  scrollYProgress,
+  totalChars,
+}: {
+  char: string
+  charIndex: number
+  scrollYProgress: MotionValue<number>
+  totalChars: number
+}) {
+  const charProgress = charIndex / totalChars
+  const charOpacity = useTransform(
+    scrollYProgress,
+    [charProgress * 0.8, charProgress * 0.8 + 0.2],
+    [0.1, 1]
+  )
+
+  return (
+    <motion.span
+      className="inline-block"
+      style={{ opacity: charOpacity }}
+    >
+      {char}
+    </motion.span>
   )
 }

@@ -29,6 +29,9 @@ const budgetRanges = [
 ]
 
 const enquiryInbox = 'info@ibnayiftibe.com'
+const primaryPhoneHref = '+917861010850'
+const primaryPhoneDisplay = '+91 78610 10850'
+const googleAdsConversionTarget = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_TARGET
 
 const encodeForm = (data: Record<string, string>) =>
   new URLSearchParams(data).toString()
@@ -94,10 +97,9 @@ export default function ContactPage() {
 
       if (response.ok) {
         setIsSubmitted(true)
-        // Track conversion
-        if (typeof window !== 'undefined' && (window as any).gtag) {
+        if (googleAdsConversionTarget && typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'conversion', {
-            'send_to': 'AW-CONVERSION_ID',
+            'send_to': googleAdsConversionTarget,
             'value': formData.budget,
           })
         }
@@ -174,17 +176,17 @@ export default function ContactPage() {
                 </div>
               </a>
 
-              <a href="tel:+917990866163" className="flex items-center gap-4 group">
+              <a href={`tel:${primaryPhoneHref}`} className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-display text-heading-sm text-foreground group-hover:text-accent transition-colors">Call Us</h3>
-                  <p className="text-body text-foreground/60">+91 7990866163</p>
+                  <p className="text-body text-foreground/60">{primaryPhoneDisplay}</p>
                 </div>
               </a>
 
-              <a href="https://wa.me/917990866163" className="flex items-center gap-4 group">
+              <a href="https://wa.me/917861010850" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                   <MessageCircle className="w-5 h-5 text-accent" />
                 </div>

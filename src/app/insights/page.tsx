@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, Tag, Sparkles } from 'lucide-react'
 import { ScrollReveal } from '@/components'
@@ -134,13 +133,10 @@ export default function InsightsPage() {
                 <span className="font-mono text-sm">{articles[0].date}</span>
               </div>
 
-              <Link
-                href="#"
-                className="inline-flex items-center gap-2 text-accent hover:text-accent-light font-medium transition-colors"
-              >
-                Read Article
+              <div className="inline-flex items-center gap-2 text-accent font-medium">
+                Full Article Coming Soon
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </div>
             </div>
           </div>
         </ScrollReveal>
@@ -185,9 +181,24 @@ export default function InsightsPage() {
             <p className="text-foreground-muted mb-6">
               Join founders building websites, apps, and Web3 products. One practical build note every Friday. No spam.
             </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form
+              name="newsletter"
+              method="POST"
+              action="/?newsletter=success"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            >
+              <input type="hidden" name="form-name" value="newsletter" />
+              <p className="hidden">
+                <label>
+                  Do not fill this out if you are human: <input name="bot-field" />
+                </label>
+              </p>
               <input
                 type="email"
+                name="email"
+                required
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-foreground-subtle focus:outline-none focus:border-accent"
               />
