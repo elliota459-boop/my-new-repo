@@ -10,18 +10,18 @@ gsap.registerPlugin(ScrollTrigger)
 const differentiators = [
   {
     icon: Target,
-    headline: 'Built Around Search Intent',
-    copy: 'We shape pages around the phrases buyers actually use: web design agency, website development company, website redesign, custom web app, ecommerce website, SEO website, and project rescue.',
+    headline: 'Full-Stack Engineering',
+    copy: 'We do not hand off between designers and developers. One team owns the UI, frontend, backend, database, APIs, and deployment. No gaps, no blame shifting, no broken handoffs.',
   },
   {
     icon: BarChart3,
-    headline: 'Answers Before Animation',
-    copy: 'A visitor should understand your offer, proof, pricing logic, process, risk, and next step before they get distracted. We use design to support trust, not hide weak positioning.',
+    headline: 'Ship Before Polish',
+    copy: 'We build the architecture first, test it, then refine the surface. You get a working product early, not a perfect mockup that falls apart in production.',
   },
   {
     icon: Compass,
-    headline: 'Human Lead Psychology',
-    copy: 'People enquire when they feel seen, safe, and understood. We write and structure content around their doubts, urgency, objections, comparison shopping, and fear of choosing the wrong team.',
+    headline: 'Rescue Without Ego',
+    copy: 'Half-built projects, AI-generated prototypes, messy repos, abandoned agency work — we audit what exists, keep what works, and rebuild what is fragile. No drama, just shipping.',
   },
 ]
 
@@ -58,10 +58,10 @@ export function Differentiator() {
       <div className="w-full px-6 md:px-12 lg:px-20">
         <div className="text-center mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            Why It Converts
+            Why It Works
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground">
-            Content That Feels Like an Answer
+            Built Different
           </h2>
         </div>
 

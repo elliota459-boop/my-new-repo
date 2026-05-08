@@ -10,14 +10,14 @@ import { ClientEngagementLayer } from '@/components/ClientEngagementLayer'
 
 export const metadata: Metadata = {
   title: 'IBNAY | Digital Studio',
-  description: 'IBNAY helps businesses get found by the right customers, build trust instantly, and convert website visitors into paying clients. We create SEO-optimized websites, custom web apps, ecommerce systems, Web3 dApps, and rescue unfinished projects that actually drive results.',
-  keywords: 'web design agency, web development agency, website development company, custom website design, SEO website development, lead generation website, conversion focused website, website redesign agency, ecommerce website development, custom web application development, SaaS MVP development, web app development company, Web3 development agency, dApp development company, smart contract development, AI generated website rescue, unfinished website rebuild',
+  description: 'IBNAY designs and builds websites, web applications, and Web3 products. Custom frontend, solid backend, smart contracts, and deployment. From landing pages to dApps, one team handles the full stack.',
+  keywords: 'web design, web development, website builder, custom website, web application, SaaS MVP, dashboard development, ecommerce development, React developer, Next.js developer, Web3 development, dApp development, smart contract developer, Solidity developer, project rescue, AI prototype cleanup, frontend development, backend development, API development',
   icons: {
     icon: '/brand/logo.png',
   },
   openGraph: {
     title: 'IBNAY | Digital Studio',
-    description: 'We help businesses like yours get found by the right customers, build trust instantly, and convert website visitors into paying clients. From custom web design to full-stack development, we turn your digital presence into your best salesperson.',
+    description: 'IBNAY designs and builds websites, web applications, and Web3 products. Custom frontend, solid backend, smart contracts, and deployment. One team, full stack, shipped products.',
     type: 'website',
   },
 }

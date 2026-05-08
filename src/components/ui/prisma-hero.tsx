@@ -131,7 +131,7 @@ const PrismaHero = () => {
                 className="text-sm text-foreground/80 sm:text-base md:text-lg max-w-sm"
                 style={{ lineHeight: 1.3 }}
               >
-                We help businesses like yours get found by the right customers, earn their trust quickly, and turn website visitors into paying clients. Whether you need a stunning website, a powerful web app, or a complete digital rescue, we build solutions that actually drive results—not just look pretty.
+                We design and build websites, web applications, and Web3 products that work. Clean frontend, solid backend, clear UX, and code you can actually ship. From landing pages to smart contracts, we handle the whole stack.
               </motion.p>
 
               <motion.div
@@ -143,7 +143,7 @@ const PrismaHero = () => {
                   href="/contact"
                   className="group inline-flex items-center gap-3 self-start rounded-full bg-accent px-6 py-2 text-base font-medium text-white transition-all hover:gap-4 sm:text-lg"
                 >
-                  Get a website plan
+                  Start a project
                   <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white transition-transform group-hover:scale-110 sm:h-12 sm:w-12">
                     <ArrowRight className="h-5 w-5 text-accent" />
                   </span>

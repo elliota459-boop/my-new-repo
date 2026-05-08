@@ -44,26 +44,26 @@ export function ProblemStatement() {
         >
           {/* Label */}
           <span className="font-mono text-label text-background/50 tracking-widest uppercase block mb-8">
-            The Problem Your Buyer Feels
+            The Real Problem
           </span>
 
           {/* Headline */}
           <h2 className="font-display text-display-sm md:text-display-md text-background mb-8 leading-tight">
-            Most websites look active
+            Most websites look finished
             <br />
-            but do not create demand.
+            but cannot actually ship.
           </h2>
 
           {/* Body Text */}
           <div className="space-y-6 text-body-lg text-background/70 max-w-2xl mx-auto">
             <p>
-              Your customer usually arrives with doubt, impatience, and too many open tabs. If your website does not answer what you do, who it is for, why you are safe to choose, and what happens next, they leave without enquiring.
+              AI tools, templates, and cheap freelancers can make something that looks like a website. But without clean architecture, working backend, proper auth, responsive design, and a deployment pipeline, you have a screenshot, not a product.
             </p>
             <p className="text-background">
-              The hidden cost is not just bad design. It is unanswered fear.
+              The real cost is not just bad design. It is months of lost time and a codebase no one wants to touch.
             </p>
             <p>
-              IBNAY builds web agency content, UX, SEO structure, frontend, backend, and conversion paths around the questions real buyers search on Google before they are ready to talk.
+              IBNAY designs and builds the full stack: frontend, backend, APIs, databases, smart contracts, and deployment. We turn your idea or half-built project into something that actually works and can grow.
             </p>
           </div>
         </div>

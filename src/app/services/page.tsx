@@ -28,29 +28,29 @@ const web2Services = [
     id: 'custom-web-development',
     icon: Globe,
     title: 'Website Design and Development',
-    subtitle: 'For businesses that need to be found, understood, and contacted',
-    description: 'We design and develop SEO-ready business websites, service pages, landing pages, ecommerce sites, and custom web applications with clear positioning, fast performance, mobile polish, contact forms, analytics, and conversion-focused structure handled by one team.',
+    subtitle: 'Custom websites built with clean code and clear UX',
+    description: 'We design and build business websites, service pages, landing pages, and ecommerce sites with responsive design, fast performance, component-based architecture, and content management your team can actually use. One team handles the design, frontend, and deployment.',
     features: [
-      'Custom Website Design',
-      'SEO Website Development',
-      'Lead Generation Landing Pages',
-      'Service Page Content Structure',
+      'Custom UI/UX Design',
+      'Responsive Website Development',
+      'Landing Pages',
+      'Service and Product Pages',
       'Website Redesign and Rebuilds',
       'Next.js and React Frontends',
-      'Contact, CRM, and Email Integrations',
-      'Analytics and Conversion Tracking'
+      'CMS and Content Management',
+      'Performance and Accessibility'
     ],
     deliverables: [
-      'SEO-Ready Website',
-      'Conversion Page Map',
-      'Reusable Component System',
-      'Lead Capture Forms',
-      'Analytics and Handoff Documentation'
+      'Production Website',
+      'Component Library',
+      'Content Management Setup',
+      'Contact Forms',
+      'Deployment and Documentation'
     ],
     pricing: '$8,000 - $45,000+',
     timeline: '4-10 weeks',
     testimonial: {
-      quote: 'The new website finally explained our offer in seconds. We stopped sounding like everyone else and started getting better-fit enquiries.',
+      quote: 'The website finally loads in under a second, works on mobile, and our team can update the content without calling a developer.',
       author: 'Ecosystem Lead',
       role: 'Founder',
       company: 'Unicorn Stake'
@@ -60,23 +60,23 @@ const web2Services = [
     id: 'ai-product-rescue',
     icon: Cpu,
     title: 'Website Redesign and Project Rescue',
-    subtitle: 'For websites that look done but do not work, rank, or convert',
-    description: 'Already have a slow website, confusing landing page, broken WordPress build, messy repository, no-code site, Figma design, or AI-generated app? We audit what exists, keep what is useful, rebuild what is fragile, and move the project toward a trustworthy launch.',
+    subtitle: 'For half-built, broken, or abandoned projects that need to ship',
+    description: 'Already have a slow website, broken WordPress build, messy repository, no-code site, Figma design, or AI-generated prototype? We audit the code, identify what is usable, rebuild what is fragile, and move the project toward a production-ready launch.',
     features: [
-      'Website Content and UX Audit',
-      'SEO Structure Review',
-      'AI-Generated Website Cleanup',
+      'Codebase Architecture Audit',
       'Broken Website Rebuilds',
+      'AI-Generated Prototype Cleanup',
       'Speed and Mobile Repair',
       'Frontend and Backend Refactoring',
-      'Form and Tracking Fixes',
+      'Form and API Fixes',
+      'Database and Auth Repair',
       'Launch Blocker Removal'
     ],
     deliverables: [
-      'Rescue Audit Report',
+      'Technical Audit Report',
       'Rebuilt Website or Codebase',
       'Critical Bug Resolution',
-      'SEO and Conversion Fix List',
+      'Performance Improvements',
       'Launch Readiness Checklist'
     ],
     pricing: '$5,000 - $60,000+',
@@ -92,13 +92,13 @@ const web2Services = [
     id: 'backend-infrastructure',
     icon: Palette,
     title: 'Custom Web App and Backend Development',
-    subtitle: 'For businesses that need more than pages',
-    description: 'We engineer the systems behind serious websites and web apps: SaaS MVPs, dashboards, portals, booking flows, ecommerce logic, APIs, databases, admin tools, authentication, payments, automations, integrations, and scalable deployment.',
+    subtitle: 'Full-stack products with real architecture',
+    description: 'We build SaaS MVPs, dashboards, portals, booking flows, ecommerce backends, APIs, databases, admin tools, authentication, payments, and deployment pipelines. The frontend and backend are built as one system, not two separate projects.',
     features: [
       'SaaS MVP Development',
       'Dashboard and Portal Development',
-      'REST and GraphQL API Development',
-      'PostgreSQL and Supabase Architecture',
+      'REST and GraphQL APIs',
+      'PostgreSQL and Database Architecture',
       'Authentication and Role Permissions',
       'Payment and Subscription Systems',
       'Admin Operations Dashboards',
@@ -110,8 +110,8 @@ const web2Services = [
       'Backend Architecture Blueprint',
       'Production API Layer',
       'Database Schema',
-      'Admin Workflow',
-      'Scaling and Maintenance Roadmap'
+      'Admin Dashboard',
+      'Deployment and Scaling Plan'
     ],
     pricing: '$25,000 - $120,000+',
     timeline: '6-16 weeks',
@@ -125,26 +125,26 @@ const web2Services = [
   {
     id: 'performance-engineering',
     icon: TrendingUp,
-    title: 'SEO and Conversion Website Optimization',
-    subtitle: 'For websites getting traffic but not enough qualified leads',
-    description: 'We improve existing websites around Google search intent, speed, clarity, trust, page hierarchy, user psychology, and form friction so visitors understand the offer and take the next step.',
+    title: 'Performance & Architecture Optimization',
+    subtitle: 'For slow, fragile, or hard-to-maintain products',
+    description: 'We audit and improve existing websites and apps for speed, code quality, database structure, responsive design, security, and deployment reliability. We fix what is broken and document what is working so your next developer can pick it up.',
     features: [
       'Technical Website Audits',
-      'SEO Page and Keyword Mapping',
+      'Code Quality Review',
       'Core Web Vitals Improvement',
-      'Buyer Psychology Content Maps',
-      'Landing Page Conversion Optimization',
-      'Checkout and Form Friction Reduction',
-      'Trust Signal and Proof Placement',
-      'Analytics and Event Tracking',
+      'Database Query Optimization',
+      'Responsive Design Fixes',
+      'Security Hardening',
+      'Third-Party Integration Cleanup',
+      'Deployment Pipeline Repair',
       '90-Day Improvement Roadmap'
     ],
     deliverables: [
-      'Website Growth Audit',
-      'Optimized User Journeys',
-      'Performance and SEO Roadmap',
-      'Analytics Infrastructure',
-      'Quarterly Performance Tuning'
+      'Technical Audit Report',
+      'Refactored Codebase',
+      'Performance Improvements',
+      'Security Fixes',
+      'Handoff Documentation'
     ],
     pricing: '$6,000 - $35,000+',
     timeline: '3-8 weeks',
@@ -162,8 +162,8 @@ const web3Services = [
     id: 'solidity-protocols',
     icon: Shield,
     title: 'Custom Solidity Protocols',
-    subtitle: 'Secure on-chain logic for products people can actually use',
-    description: 'We engineer smart contracts for DeFi flows, token launches, DAOs, NFT utilities, staking, rewards, and custom Web3 products, then connect them to usable dashboards and backend infrastructure.',
+    subtitle: 'Smart contracts built, tested, and deployed',
+    description: 'We write and audit smart contracts for DeFi, staking, token launches, DAOs, and custom Web3 products. Then we connect them to usable dashboards and backend infrastructure that actually works.',
     features: [
       'Advanced Solidity Protocol Design',
       'Proprietary Staking & Yield Logic',
@@ -193,9 +193,9 @@ const web3Services = [
   {
     id: 'institutional-dashboards',
     icon: Layers,
-    title: 'dApp Frontends & Wallet Experiences',
-    subtitle: 'Web3 interfaces that feel clear instead of risky',
-    description: 'High-performance dApp interfaces for users, admins, and communities. We connect wallet authentication, smart contract calls, backend data, charts, transaction states, and trust-building UX.',
+    title: 'dApp Frontends & Wallet Integration',
+    subtitle: 'Web3 interfaces connected to real backend infrastructure',
+    description: 'We build dApp interfaces for users and admins with wallet authentication, smart contract interaction, on-chain data visualization, transaction handling, and responsive design across all devices.',
     features: [
       'Real-time On-Chain Data Feeds',
       'Complex Transaction Handling',
@@ -303,15 +303,15 @@ export default function ServicesPage() {
             transition={{ duration: 0.6 }}
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="font-mono text-sm text-accent-light">Website, SEO, Web App and Web3 Expertise</span>
+            <span className="font-mono text-sm text-accent-light">Website, Web App and Web3 Development</span>
           </motion.div>
           
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 max-w-4xl">
-            Website Services For
-            <span className="text-accent block">Search, Trust and Qualified Leads</span>
+            Design, Engineering,
+            <span className="text-accent block">and Web3</span>
           </h1>
           <p className="text-xl text-foreground-muted max-w-2xl leading-relaxed mb-8">
-            People searching on Google do not want a generic marketing agency. They want a clear answer to a real problem: build my website, redesign my site, improve my leads, fix my broken build, or develop my web app. These services are structured around those buying moments.
+            We build websites, web applications, backend systems, and Web3 products. One team handles the design, frontend, backend, database, smart contracts, and deployment. No handoffs, no gaps.
           </p>
           
           {/* Transformation Metrics */}
@@ -322,7 +322,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <div className="font-display text-2xl text-foreground">40+</div>
-                <div className="font-mono text-sm text-foreground-subtle">Search Pages Mapped</div>
+                <div className="font-mono text-sm text-foreground-subtle">Projects Shipped</div>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -340,7 +340,7 @@ export default function ServicesPage() {
               </div>
               <div>
                 <div className="font-display text-2xl text-foreground">98%</div>
-                <div className="font-mono text-sm text-foreground-subtle">Clarity Focus</div>
+                <div className="font-mono text-sm text-foreground-subtle">Clean Handoffs</div>
               </div>
             </div>
           </div>
@@ -393,11 +393,11 @@ export default function ServicesPage() {
               </motion.div>
               <div>
                 <h2 className="font-display text-2xl text-foreground mb-3">
-                  {activeTab === 'web2' ? 'Website Design, SEO and Web App Development' : 'Web3, Smart Contract, and dApp Development'}
+                  {activeTab === 'web2' ? 'Website Design and Web App Development' : 'Web3, Smart Contract, and dApp Development'}
                 </h2>
                 <p className="text-foreground-muted text-lg leading-relaxed max-w-2xl">
                   {activeTab === 'web2' 
-                    ? 'SEO-ready websites, service pages, landing pages, website redesigns, custom web apps, dashboards, ecommerce builds, backend systems, and rescue work for unfinished or AI-generated projects.'
+                    ? 'Custom websites, landing pages, web app MVPs, dashboards, ecommerce builds, backend systems, APIs, and rescue work for unfinished or AI-generated projects.'
                     : 'Smart contracts, dApps, wallet flows, token systems, DeFi dashboards, NFT utilities, and blockchain integrations built with security-first development and clear user experience.'}
                 </p>
               </div>

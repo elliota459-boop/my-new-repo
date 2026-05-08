@@ -12,85 +12,85 @@ const phases = [
   {
     number: '01',
     icon: Search,
-    title: 'Project Reality Check',
+    title: 'Discovery & Audit',
     timeline: 'Week 1-2',
     description: 'We inspect what exists, clarify what must be built, and separate reusable work from risky assumptions.',
     clientInput: 'Existing website, Figma file, repository, AI-generated build, product notes, business goals, blockers, deadline, and must-have features',
     deliverables: [
-      'Project rescue audit',
+      'Technical audit report',
       'Feature and page map',
-      'Technical risk report',
-      'Reuse versus rebuild recommendation',
+      'Architecture recommendation',
+      'Reuse versus rebuild plan',
       'Launch scope definition',
-      'Project engineering roadmap',
+      'Engineering roadmap',
     ],
-    tools: ['Notion', 'Figma', 'GitHub', 'Miro'],
+    tools: ['Notion', 'Figma', 'GitHub'],
   },
   {
     number: '02',
     icon: FileText,
-    title: 'Product Architecture',
+    title: 'System Architecture',
     timeline: 'Week 2-4',
-    description: 'We design the full system before production work: UX flows, frontend structure, backend, database, integrations, and Web3 logic where needed.',
-    clientInput: 'Approval of user flows, content direction, required integrations, admin workflows, and launch priorities',
+    description: 'We design the full system before production work: UX flows, frontend components, backend APIs, database, integrations, and smart contract logic where needed.',
+    clientInput: 'Approval of user flows, brand direction, required integrations, admin workflows, and launch priorities',
     deliverables: [
-      'UX and conversion flow',
-      'Frontend component plan',
+      'UX flow documentation',
+      'Frontend component system',
       'Backend API schema',
-      'Database normalization plan',
+      'Database architecture',
       'Integration requirements',
-      'Web3 contract architecture when needed',
+      'Smart contract design when needed',
     ],
     tools: ['Next.js', 'Node.js', 'PostgreSQL', 'Solidity'],
   },
   {
     number: '03',
     icon: Palette,
-    title: 'Interface and Content System',
-    timeline: 'Week 4-7',
-    description: 'We turn the architecture into a website or app that creates clarity, trust, and action from the first screen.',
-    clientInput: 'UI feedback, brand assets, offer details, testimonials or proof, product screenshots, and launch copy approvals',
+    title: 'Design & Frontend',
+    timeline: 'Week 4-8',
+    description: 'We turn the architecture into interfaces: responsive layouts, component libraries, animation, and the frontend logic that connects to real data.',
+    clientInput: 'UI feedback, brand assets, product content, screenshots, and final copy approvals',
     deliverables: [
-      'High-intent website UI',
-      'Interactive web app prototypes',
-      'Design system documentation',
-      'SEO-aligned page structure',
-      'Responsive website and dApp layouts',
-      'Technical frontend architecture',
+      'Responsive website or app UI',
+      'Interactive prototypes',
+      'Component library',
+      'Page structure and navigation',
+      'Mobile and desktop layouts',
+      'Frontend architecture docs',
     ],
     tools: ['Figma', 'React', 'Tailwind', 'Framer Motion'],
   },
   {
     number: '04',
     icon: Code,
-    title: 'Full-Stack Development',
-    timeline: 'Week 7-11',
-    description: 'We build the production frontend, backend, database, integrations, smart contracts, admin tools, and deployment pipeline.',
-    clientInput: 'Beta testing participation, technical documentation review, content lock, and final approvals',
+    title: 'Backend & Integration',
+    timeline: 'Week 6-10',
+    description: 'We build the production backend, APIs, database, authentication, payments, smart contracts, and connect everything to the frontend.',
+    clientInput: 'Beta testing, API review, content lock, and final approvals',
     deliverables: [
-      'Production-ready Next.js app',
-      'Optimized backend infrastructure',
-      'Integrated payments, APIs, or smart contracts',
+      'Production API layer',
+      'Database and auth system',
+      'Payment or wallet integration',
       'Automated testing suite',
-      'Internal security review',
-      'Analytics and monitoring layer',
+      'Security review',
+      'Monitoring and logging',
     ],
     tools: ['Next.js', 'Ethers.js', 'Vercel', 'GitHub', 'Sentry'],
   },
   {
     number: '05',
     icon: Rocket,
-    title: 'QA, Deployment and Launch Support',
-    timeline: 'Week 11-12',
-    description: 'Final testing, production deployment, analytics setup, security checks, and launch support.',
-    clientInput: 'Production approval, domain/DNS access, third-party account access, launch timing, and post-launch support priorities',
+    title: 'Deployment & Handoff',
+    timeline: 'Week 10-12',
+    description: 'Final testing, production deployment, domain setup, monitoring, documentation, and training your team to take over.',
+    clientInput: 'Production approval, domain/DNS access, third-party accounts, and launch timing',
     deliverables: [
-      'QA and launch checklist',
       'Production deployment',
-      'Server and app monitoring',
-      'Technical handoff documentation',
+      'Testing and QA report',
+      'Technical documentation',
+      'Team handoff session',
       'Post-launch support plan',
-      'Ongoing engineering support',
+      'Monitoring dashboard',
     ],
     tools: ['Vercel', 'AWS', 'Netlify', 'Grafana'],
   },
@@ -106,12 +106,12 @@ const faqs = [
     answer: 'Yes. We build traditional websites, SaaS MVPs, dashboards, ecommerce systems, APIs, and backend infrastructure, plus Web3 products such as dApps, smart contracts, wallet flows, token systems, and DeFi dashboards.',
   },
   {
-    question: 'How long does a full web agency build take?',
+    question: 'How long does a typical project take?',
     answer: 'A focused website or MVP can launch in 4-8 weeks. More complex web apps, dashboards, dApps, or rescue projects usually take 8-12 weeks depending on code quality, scope, integrations, and approval speed.',
   },
   {
     question: 'Can you fix something made with AI tools?',
-    answer: 'Yes. AI-generated apps often look impressive but miss architecture, security, database logic, responsive polish, and deployment reliability. We can convert that prototype into a production-ready web product.',
+    answer: 'Yes. AI-generated apps often look impressive but miss architecture, security, database logic, responsive polish, and deployment reliability. We convert those prototypes into production-ready web products.',
   },
   {
     question: 'How do you handle project communication?',
@@ -162,10 +162,10 @@ export default function ProcessPage() {
           <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-6">
             How We Turn
             <br />
-            <span className="text-accent">Unfinished Ideas Into Live Products</span>
+            <span className="text-accent">Ideas Into Live Products</span>
           </h1>
           <p className="text-body-lg text-foreground/60 max-w-2xl">
-            A clear web agency process for custom websites, web apps, Web3 products, dApps, and rescue projects that need a reliable path to launch.
+            A straightforward process for building websites, web apps, Web3 products, and rescuing projects that need a reliable path to production.
           </p>
         </div>
 
@@ -256,13 +256,13 @@ export default function ProcessPage() {
 
         <section className="text-center py-16 border-t border-border">
           <h2 className="font-display text-display-sm text-foreground mb-4">
-            Ready to get the project moving?
+            Ready to start building?
           </h2>
           <p className="text-body text-foreground/60 mb-8 max-w-xl mx-auto">
-            Send the idea, site, repo, or prototype. We will show you the fastest responsible path to a live product.
+            Send the idea, site, repo, or prototype. We will show you the fastest path to a live product.
           </p>
           <Link href="/contact" className="btn-primary group">
-            Get Your Build Plan
+            Start a Project
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </section>

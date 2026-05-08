@@ -18,17 +18,17 @@ const tiers = [
   {
     name: 'Website Launch',
     icon: Zap,
-    description: 'For businesses that need an SEO-ready website, service page system, landing page, or focused redesign that is clear, fast, and built to generate qualified enquiries.',
+    description: 'For businesses that need a custom website, landing page, service page system, or redesign that is clear, fast, and built to work on every device.',
     price: 'Custom Quote',
     timeline: '4-8 weeks',
     highlight: false,
     features: [
-      'High-Intent Website Strategy',
-      'Buyer and Keyword Intent Mapping',
       'Custom UI/UX Design',
-      'Next.js Website Development',
-      'SEO Page Structure',
-      'Contact Forms and Analytics',
+      'Responsive Website Development',
+      'Landing and Service Pages',
+      'Next.js / React Frontend',
+      'Content Management Setup',
+      'Contact Forms and Integrations',
       'Performance Optimization',
       'Launch and Handoff Support',
     ],
@@ -59,13 +59,13 @@ const tiers = [
   {
     name: 'Rescue and Rebuild',
     icon: Rocket,
-    description: 'For slow, confusing, half-built, broken, AI-generated, or previously outsourced websites and apps that need sharper content, cleaner UX, senior engineering, and a clear launch path.',
+    description: 'For slow, confusing, half-built, broken, AI-generated, or previously outsourced websites and apps that need cleaner code, solid architecture, and a clear path to production.',
     price: 'Audit First',
     timeline: '2-10 weeks',
     highlight: false,
     features: [
       'Existing Codebase Audit',
-      'Website Message and SEO Audit',
+      'Architecture Review',
       'AI Prototype Cleanup',
       'Website or App Rebuild',
       'Bug and Performance Fixes',
@@ -116,15 +116,15 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="font-mono text-sm text-accent-light">Website and Web App Pricing</span>
+            <span className="font-mono text-sm text-accent-light">Web Development Pricing</span>
           </motion.div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
             Priced Around
-            <span className="block text-accent">What Needs to Work</span>
+            <span className="block text-accent">What Needs to Ship</span>
           </h1>
           <p className="text-xl text-foreground-muted leading-relaxed">
-            We scope around the real work: search intent, website content, UX, frontend, backend, Web3 logic, integrations, rescue risk, deployment, analytics, and post-launch improvement.
+            We scope around the real work: UI design, frontend components, backend APIs, database architecture, Web3 integration, deployment pipeline, testing, and post-launch support.
           </p>
         </ScrollReveal>
 

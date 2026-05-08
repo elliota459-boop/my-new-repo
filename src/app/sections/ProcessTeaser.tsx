@@ -12,30 +12,30 @@ const steps = [
   {
     number: '01',
     icon: Search,
-    title: 'Buyer and Search Audit',
+    title: 'Discovery & Scope',
     timeline: 'Week 1-2',
-    description: 'We study your offer, ideal customer, competitors, current website, Google search intent, and the questions a buyer needs answered before they contact you.',
+    description: 'We audit what exists, clarify what must be built, and define the architecture. For rescues, we identify what to keep, fix, or rebuild before writing new code.',
   },
   {
     number: '02',
     icon: Map,
-    title: 'Website Message Map',
+    title: 'Architecture & Design',
     timeline: 'Week 2-4',
-    description: 'We plan service pages, landing pages, proof, FAQs, calls to action, content hierarchy, forms, analytics, and technical structure around conversion and SEO.',
+    description: 'We design the UI system and map the technical stack: frontend components, API structure, database schema, auth flows, and third-party integrations.',
   },
   {
     number: '03',
     icon: Palette,
-    title: 'Design and Build',
-    timeline: 'Week 4-7',
-    description: 'We design and develop a fast website or web app that feels credible, answers objections, works on mobile, and gives qualified visitors a clear next step.',
+    title: 'Build & Iterate',
+    timeline: 'Week 4-8',
+    description: 'We write production code, build responsive interfaces, connect the backend, integrate payments or wallets, and test everything end-to-end before you see it.',
   },
   {
     number: '04',
     icon: Rocket,
-    title: 'Launch and Handoff',
-    timeline: 'Week 7-12',
-    description: 'We deploy, test, connect search and conversion tracking, document the system, and stay close so the website can improve after real visitors arrive.',
+    title: 'Deploy & Handoff',
+    timeline: 'Week 8-12',
+    description: 'We deploy to production, set up monitoring, write technical documentation, and train your team. The code is yours, clean, and ready for the next developer.',
   },
 ]
 
@@ -72,15 +72,15 @@ export function ProcessTeaser() {
       <div className="w-full px-6 md:px-12 lg:px-20">
         <div className="mb-16 md:mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            Ranking and Lead Process
+            How We Work
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground mb-6">
-            How a Website
+            From Idea
             <br />
-            <span className="text-accent">Becomes a Lead System</span>
+            <span className="text-accent">To Live Product</span>
           </h2>
           <p className="text-body-lg text-foreground/60 max-w-xl">
-            We do not just fill sections with attractive words. We turn search intent, buyer psychology, proof, UX, engineering, and analytics into one clear path from Google visit to enquiry.
+            No vague phases or vanity deliverables. We scope the work, design the system, write the code, test it, deploy it, and hand it over. You see progress every week.
           </p>
         </div>
 

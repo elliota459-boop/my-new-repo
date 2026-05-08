@@ -13,26 +13,26 @@ gsap.registerPlugin(ScrollTrigger)
 const services = [
   {
     number: '01',
-    title: 'SEO-Ready Website Development',
-    description: 'Business websites, service pages, landing pages, and redesigns built around search intent, clear offers, trust signals, fast loading, and enquiry-focused user journeys.',
+    title: 'Website Design & Development',
+    description: 'Custom websites and landing pages built with clean frontend architecture, responsive design, fast performance, and content management that your team can actually update.',
     href: '/services#custom-web-development',
   },
   {
     number: '02',
-    title: 'Custom Web App Development',
-    description: 'SaaS MVPs, dashboards, portals, ecommerce systems, booking flows, CRMs, and internal tools with frontend, backend, database, payments, and analytics handled together.',
+    title: 'Web Application Development',
+    description: 'SaaS MVPs, dashboards, portals, ecommerce systems, and internal tools with full-stack engineering: React frontend, Node.js backend, database design, auth, and payments.',
     href: '/services#custom-web-development',
   },
   {
     number: '03',
-    title: 'Website Redesign and Rescue',
-    description: 'For slow sites, confusing pages, broken WordPress builds, unfinished agency work, AI-generated prototypes, and projects that look done but cannot reliably convert or launch.',
+    title: 'Project Rescue & Rebuild',
+    description: 'Half-built projects, broken WordPress sites, messy agency handoffs, abandoned AI prototypes — we audit the code, fix the architecture, and get it to production.',
     href: '/services#ai-product-rescue',
   },
   {
     number: '04',
-    title: 'Web3 and Backend Engineering',
-    description: 'APIs, admin panels, auth, payments, cloud deployment, wallets, smart contracts, token flows, and dApp interfaces for teams that need more than a brochure website.',
+    title: 'Web3 & Smart Contract Engineering',
+    description: 'Solidity smart contracts, dApp frontends, wallet integrations, token systems, and DeFi dashboards connected to real backend infrastructure that actually works.',
     href: '/services#backend-infrastructure',
   },
 ]
@@ -82,12 +82,12 @@ export function ServicesOverview() {
       <div className="w-full px-6 md:px-12 lg:px-20">
         <div ref={headerRef} className="mb-16 md:mb-20">
           <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            Services People Search For
+            What We Build
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground">
-            Websites Built To
+            Design, Engineering,
             <br />
-            <span className="text-accent">Rank, Explain, and Convert</span>
+            <span className="text-accent">and Shipping</span>
           </h2>
         </div>
 

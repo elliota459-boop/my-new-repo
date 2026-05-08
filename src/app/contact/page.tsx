@@ -8,15 +8,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const projectTypes = [
-  'New SEO-Ready Website',
-  'Website Redesign / Lead Improvement',
-  'Landing Page for Ads or Google',
+  'New Website',
+  'Website Redesign',
+  'Landing Page',
   'Web App / SaaS MVP',
-  'Ecommerce Website',
+  'Ecommerce Platform',
   'Web3 dApp / Smart Contract',
   'Half-Built Project Rescue',
-  'AI-Generated App Cleanup',
-  'Backend Infrastructure',
+  'AI-Generated Prototype Cleanup',
+  'Backend / API Development',
   'Other',
 ]
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
               Message Received
             </h1>
             <p className="text-body-lg text-foreground/60 mb-8">
-              Thank you for reaching out. We will review your project details and get back to you within 4 business hours with our initial thoughts, risks, and next steps.
+              Thank you for reaching out. We will review your project details and get back to you within 4 business hours with our initial thoughts and next steps.
             </p>
             <p className="font-mono text-label text-foreground/40">
               In the meantime, feel free to explore our work or learn more about our process.
@@ -149,12 +149,12 @@ export default function ContactPage() {
               Get In Touch
             </span>
             <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-6">
-              Tell Us What Your Website
+              Tell Us What You Need
               <br />
-              <span className="text-accent">Needs to Achieve</span>
+              <span className="text-accent">To Build</span>
             </h1>
             <p className="text-body-lg text-foreground/60 mb-12 max-w-md">
-              Send your current website, idea, Figma file, repository, AI-generated prototype, or half-built product. We will review what buyers are likely searching for, what your page is not answering, and what needs to change to attract better leads.
+              Send your current project, idea, Figma file, repository, or half-built product. We will review what is feasible, what the architecture should look like, and how to get it to production.
             </p>
 
             {/* Contact Methods */}
@@ -203,7 +203,7 @@ export default function ContactPage() {
             {/* Scarcity Note */}
             <div className="p-6 border border-accent/30 bg-accent/5 rounded-lg">
               <p className="font-mono text-label text-accent">
-                We take on a limited number of website strategy reviews each month so every response is specific, useful, and honest.
+                We take on a limited number of projects each month so every build gets the attention it needs.
               </p>
             </div>
           </div>

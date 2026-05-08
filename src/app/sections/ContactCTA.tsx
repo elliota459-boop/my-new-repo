@@ -93,22 +93,20 @@ export function ContactCTA() {
               }}
             />
             <span className="font-mono text-label text-accent">
-              Website strategy reviews are limited each month
+              We take on a limited number of projects each month
             </span>
           </motion.div>
 
           {/* Headline */}
           <h2 className="font-display text-display-sm md:text-display-md lg:text-display-lg text-foreground mb-6 leading-tight">
-            Your website should answer
+            Have an idea, a half-built product,
             <br />
-            <span className="text-accent">the questions buyers already have</span>
-            <br />
-            before they leave.
+            <span className="text-accent">or a website that needs to ship?</span>
           </h2>
 
           {/* Subheadline */}
           <p className="text-body-lg text-foreground/60 mb-12 max-w-2xl mx-auto">
-            Send your current website, idea, Figma, repo, or broken build. We will review the message, SEO structure, UX friction, technical risks, and lead path, then tell you what to fix first.
+            Send your current project, Figma file, repository, or just a description of what you need. We will tell you what is feasible, what it will take, and how to get it live.
           </p>
 
           {/* CTA Block */}
@@ -123,7 +121,7 @@ export function ContactCTA() {
                   whileHover={{ x: 4 }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
-                  Get My Website Plan
+                  Start a Project
                   <ArrowRight className="w-5 h-5" />
                 </motion.span>
               </Link>
