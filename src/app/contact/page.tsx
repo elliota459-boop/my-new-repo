@@ -28,13 +28,10 @@ const budgetRanges = [
   '$250K+',
 ]
 
-const enquiryInbox = 'info@ibnayiftibe.com'
+const enquiryInbox = 'info@ibnayiftribe.com'
 const primaryPhoneHref = '+917861010850'
 const primaryPhoneDisplay = '+91 78610 10850'
 const googleAdsConversionTarget = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_TARGET
-
-const encodeForm = (data: Record<string, string>) =>
-  new URLSearchParams(data).toString()
 
 declare global {
   interface Window {
@@ -91,14 +88,12 @@ export default function ContactPage() {
     setSubmitError('')
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
-        body: encodeForm({
-          'form-name': 'contact',
-          enquiryInbox,
+        body: JSON.stringify({
           ...formData,
         }),
       })

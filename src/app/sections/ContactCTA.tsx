@@ -133,11 +133,11 @@ export function ContactCTA() {
             <div className="flex flex-col sm:flex-row items-center gap-6 text-foreground/50">
               <span className="font-mono text-label">Or reach us directly:</span>
               <a
-                href="mailto:info@ibnayiftibe.com"
+                href="mailto:info@ibnayiftribe.com"
                 className="flex items-center gap-2 hover:text-accent transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                info@ibnayiftibe.com
+                info@ibnayiftribe.com
               </a>
               <a
                 href="tel:+917861010850"

@@ -86,10 +86,10 @@ export function Footer() {
               <div>
                 <div className="text-[10px] font-mono uppercase tracking-wider text-foreground/30 mb-1">E-mail</div>
                 <a
-                  href="mailto:info@ibnayiftibe.com"
+                  href="mailto:info@ibnayiftribe.com"
                   className="text-body text-foreground/70 hover:text-accent transition-colors block"
                 >
-                  info@ibnayiftibe.com
+                  info@ibnayiftribe.com
                 </a>
               </div>
               <div>
