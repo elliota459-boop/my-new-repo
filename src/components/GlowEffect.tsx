@@ -13,7 +13,7 @@ interface GlowEffectProps {
 export function GlowEffect({ 
   children, 
   className = '',
-  glowColor = 'rgba(44, 191, 174, 0.45)',
+  glowColor = 'rgba(90, 79, 207, 0.45)',
   intensity = 'medium'
 }: GlowEffectProps) {
   const intensityMap = {
@@ -113,7 +113,7 @@ interface GradientShiftProps {
 export function GradientShift({ 
   children, 
   className = '',
-  colors = ['from-teal-600', 'via-cyan-600', 'to-slate-600'],
+  colors = ['from-violet-600', 'via-purple-600', 'to-slate-600'],
   duration = 5
 }: GradientShiftProps) {
   return (

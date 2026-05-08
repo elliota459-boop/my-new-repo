@@ -46,7 +46,7 @@ export function Timeline3D({ phases, className = '' }: Timeline3DProps) {
       <div
         className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2"
         style={{
-          background: 'linear-gradient(180deg, rgba(44, 191, 174, 0.3) 0%, rgba(119, 214, 203, 0.1) 50%, rgba(44, 191, 174, 0.3) 100%)',
+          background: 'linear-gradient(180deg, rgba(90, 79, 207, 0.3) 0%, rgba(122, 113, 215, 0.1) 50%, rgba(90, 79, 207, 0.3) 100%)',
           transform: 'translateX(-50%) perspective(1000px) rotateY(45deg)',
           transformStyle: 'preserve-3d',
         }}
@@ -58,7 +58,7 @@ export function Timeline3D({ phases, className = '' }: Timeline3DProps) {
         style={{
           height: useTransform(scrollYProgress, [0, 1], ['0%', '100%']),
           transform: 'translateX(-50%) perspective(1000px) rotateY(45deg)',
-          boxShadow: '0 0 20px rgba(44, 191, 174, 0.5)',
+          boxShadow: '0 0 20px rgba(90, 79, 207, 0.5)',
         }}
       />
 
@@ -130,8 +130,8 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
           animate={{
             scale: isActive ? 1.1 : 1,
             boxShadow: isActive
-              ? '0 0 40px rgba(44, 191, 174, 0.4)'
-              : '0 0 0 rgba(44, 191, 174, 0)',
+              ? '0 0 40px rgba(90, 79, 207, 0.4)'
+              : '0 0 0 rgba(90, 79, 207, 0)',
           }}
           transition={{ duration: 0.5 }}
           style={{
@@ -163,7 +163,7 @@ function TimelinePhaseCard({ phase, index, isActive }: TimelinePhaseCardProps) {
           }}
           animate={{
             boxShadow: isActive
-              ? '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(44, 191, 174, 0.2)'
+              ? '0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(90, 79, 207, 0.2)'
               : '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
           }}
         >

@@ -72,17 +72,17 @@ export function FloatingObject3D({
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(135deg, rgba(44, 191, 174, 0.3) 0%, rgba(119, 214, 203, 0.1) 50%, rgba(44, 191, 174, 0.3) 100%)',
+          background: 'linear-gradient(135deg, rgba(90, 79, 207, 0.3) 0%, rgba(122, 113, 215, 0.1) 50%, rgba(90, 79, 207, 0.3) 100%)',
           clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
           transform: 'rotateX(0deg) translateZ(50px)',
           filter: 'blur(0.5px)',
-          boxShadow: '0 0 60px rgba(44, 191, 174, 0.3), inset 0 0 60px rgba(119, 214, 203, 0.1)',
+          boxShadow: '0 0 60px rgba(90, 79, 207, 0.3), inset 0 0 60px rgba(122, 113, 215, 0.1)',
         }}
       />
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(225deg, rgba(44, 191, 174, 0.2) 0%, rgba(23, 141, 130, 0.4) 100%)',
+          background: 'linear-gradient(225deg, rgba(90, 79, 207, 0.2) 0%, rgba(59, 47, 168, 0.4) 100%)',
           clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
           transform: 'rotateY(72deg) translateZ(50px)',
           filter: 'blur(0.5px)',
@@ -91,7 +91,7 @@ export function FloatingObject3D({
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(45deg, rgba(44, 191, 174, 0.25) 0%, rgba(119, 214, 203, 0.15) 100%)',
+          background: 'linear-gradient(45deg, rgba(90, 79, 207, 0.25) 0%, rgba(122, 113, 215, 0.15) 100%)',
           clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
           transform: 'rotateY(144deg) translateZ(50px)',
           filter: 'blur(0.5px)',
@@ -100,7 +100,7 @@ export function FloatingObject3D({
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(315deg, rgba(23, 141, 130, 0.35) 0%, rgba(44, 191, 174, 0.2) 100%)',
+          background: 'linear-gradient(315deg, rgba(59, 47, 168, 0.35) 0%, rgba(90, 79, 207, 0.2) 100%)',
           clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
           transform: 'rotateY(216deg) translateZ(50px)',
           filter: 'blur(0.5px)',
@@ -109,7 +109,7 @@ export function FloatingObject3D({
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(180deg, rgba(119, 214, 203, 0.2) 0%, rgba(44, 191, 174, 0.3) 100%)',
+          background: 'linear-gradient(180deg, rgba(122, 113, 215, 0.2) 0%, rgba(90, 79, 207, 0.3) 100%)',
           clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)',
           transform: 'rotateY(288deg) translateZ(50px)',
           filter: 'blur(0.5px)',
@@ -120,7 +120,7 @@ export function FloatingObject3D({
       <div 
         className="absolute inset-0 rounded-full"
         style={{
-          background: 'radial-gradient(circle, rgba(44, 191, 174, 0.4) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(90, 79, 207, 0.4) 0%, transparent 70%)',
           filter: 'blur(40px)',
           transform: 'scale(1.5)',
           animation: 'pulse-glow 4s ease-in-out infinite',
@@ -147,11 +147,11 @@ export function FloatingObject3D({
       style={{
         width: size,
         height: size,
-        background: 'radial-gradient(circle at 30% 30%, rgba(119, 214, 203, 0.6) 0%, rgba(44, 191, 174, 0.4) 40%, rgba(23, 141, 130, 0.6) 100%)',
+        background: 'radial-gradient(circle at 30% 30%, rgba(122, 113, 215, 0.6) 0%, rgba(90, 79, 207, 0.4) 40%, rgba(59, 47, 168, 0.6) 100%)',
         boxShadow: `
-          0 0 80px rgba(44, 191, 174, 0.4),
-          inset -20px -20px 60px rgba(23, 141, 130, 0.5),
-          inset 20px 20px 60px rgba(119, 214, 203, 0.3)
+          0 0 80px rgba(90, 79, 207, 0.4),
+          inset -20px -20px 60px rgba(59, 47, 168, 0.5),
+          inset 20px 20px 60px rgba(122, 113, 215, 0.3)
         `,
         animation: 'float-sphere 6s ease-in-out infinite',
       }}
@@ -178,10 +178,10 @@ export function FloatingObject3D({
       <div
         className="absolute inset-0 rounded-full"
         style={{
-          background: 'conic-gradient(from 0deg, rgba(44, 191, 174, 0.6), rgba(119, 214, 203, 0.3), rgba(44, 191, 174, 0.6))',
+          background: 'conic-gradient(from 0deg, rgba(90, 79, 207, 0.6), rgba(122, 113, 215, 0.3), rgba(90, 79, 207, 0.6))',
           boxShadow: `
-            0 0 60px rgba(44, 191, 174, 0.4),
-            inset 0 0 60px rgba(23, 141, 130, 0.3)
+            0 0 60px rgba(90, 79, 207, 0.4),
+            inset 0 0 60px rgba(59, 47, 168, 0.3)
           `,
           clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 35%, 35% 35%, 35% 65%, 65% 65%, 65% 35%, 0% 35%)',
         }}

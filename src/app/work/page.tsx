@@ -17,7 +17,7 @@ const projects = [
     service: 'Full-Stack Web3 Infrastructure',
     metric: 'TVL growth tracked after launch',
     description: 'Engineered a comprehensive referral staking architecture on BSC. From Solidity smart contracts to high-frequency backend systems.',
-    color: 'from-teal-600/30 via-cyan-500/10 to-slate-950',
+    color: 'from-violet-600/30 via-purple-500/10 to-slate-950',
     signals: ['Staking dashboard', 'Referral engine', 'Reward backend'],
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     service: 'Ecosystem & Backend Architecture',
     metric: 'Token workflow stabilized for launch',
     description: 'Developed the entire backend and smart contract infrastructure for a multi-layered agri-fintech ecosystem.',
-    color: 'from-emerald-600/30 via-teal-500/10 to-slate-950',
+    color: 'from-violet-600/30 via-purple-500/10 to-slate-950',
     signals: ['BEP-20 token', 'Mining lock', 'Product tokenization'],
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     service: 'Proprietary AI Modeling',
     metric: 'Confidential systems work under NDA',
     description: 'Under strict NDA, we developed complex AI-driven modeling and large-scale EdTech infrastructures.',
-    color: 'from-teal-600/25 via-slate-600/20 to-background-card',
+    color: 'from-violet-600/25 via-slate-600/20 to-background-card',
     signals: ['Data pipeline', 'Role systems', 'Protected IP'],
   },
 ]

@@ -20,12 +20,12 @@
   --color-foreground-muted: #A1A1AA;
   --color-foreground-subtle: #71717A;
   
-  /* Accent - Calm Teal */
-  --color-accent: #2CBFAE;
-  --color-accent-light: #77D6CB;
-  --color-accent-dark: #178D82;
-  --color-accent-muted: rgba(44, 191, 174, 0.15);
-  --accent: 44, 191, 174;
+  /* Accent - Royal Purple */
+  --color-accent: #5a4fcf;
+  --color-accent-light: #7A71D7;
+  --color-accent-dark: #3B2FA8;
+  --color-accent-muted: rgba(90, 79, 207, 0.15);
+  --accent: 90, 79, 207;
   
   /* Secondary Accents */
   --color-warm: #DDA15E;
@@ -39,8 +39,8 @@
   --color-border-light: #3B4A51;
   
   /* Gradient Stops */
-  --gradient-start: rgba(44, 191, 174, 0.14);
-  --gradient-mid: rgba(119, 214, 203, 0.08);
+  --gradient-start: rgba(90, 79, 207, 0.14);
+  --gradient-mid: rgba(122, 113, 215, 0.08);
   --gradient-end: transparent;
 }
 
@@ -181,7 +181,7 @@ textarea:focus-visible {
 
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 5px 20px rgba(44, 191, 174, 0.25);
+  box-shadow: 0 5px 20px rgba(90, 79, 207, 0.25);
 }
 
 .btn-outline {
