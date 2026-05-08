@@ -50,7 +50,7 @@ const articles = [
   },
   {
     title: 'Next.js Website Development for Serious Business Sites',
-    excerpt: 'Where Next.js helps with speed, SEO structure, reusable components, deployment, and custom application development.',
+    excerpt: 'Where Next.js helps with speed, component architecture, deployment, and custom application development.',
     category: 'Web Development',
     readTime: '10 min read',
     date: 'Nov 20, 2024',

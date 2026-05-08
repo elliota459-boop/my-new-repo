@@ -8,7 +8,7 @@ const notifications = [
   { name: 'Common request', action: 'scope a dApp or wallet experience', time: 'Web3 build' },
   { name: 'Common request', action: 'turn an AI prototype into a reliable launch', time: 'Cleanup sprint' },
   { name: 'Common request', action: 'plan a SaaS MVP with backend and analytics', time: 'Product build' },
-  { name: 'Common request', action: 'rebuild an ecommerce site around better enquiries', time: 'Website rebuild' },
+  { name: 'Common request', action: 'rebuild an ecommerce site with proper backend and checkout', time: 'Website rebuild' },
 ]
 
 export function SocialProofNotifications() {

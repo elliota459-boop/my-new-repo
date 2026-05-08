@@ -63,9 +63,9 @@ export async function POST(request: Request) {
   })
 
   const submittedAt = new Date().toISOString()
-  const subject = `New website enquiry from ${name}`
+  const subject = `New project inquiry from ${name}`
   const text = [
-    `New website enquiry received at ${submittedAt}`,
+    `New project inquiry received at ${submittedAt}`,
     '',
     `Name: ${name}`,
     `Email: ${email}`,

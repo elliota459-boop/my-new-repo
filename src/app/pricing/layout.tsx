@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   keywords: 'web design pricing, website development cost, web app pricing, ecommerce pricing, Web3 development cost',
   openGraph: {
     title: 'Web Design Pricing | IBNAY',
-    description: 'Clear pricing for professional web design and development. From SEO websites to custom web apps - know the cost upfront.',
+    description: 'Clear pricing for professional web design and development. From websites to custom web apps - know the cost upfront.',
     type: 'website',
   },
 }

@@ -243,7 +243,7 @@ export default function PricingPage() {
             Not sure where your project fits?
           </h3>
           <p className="text-foreground-muted mb-8 max-w-xl mx-auto">
-            Send us the current state. We will help you choose between a new SEO-ready website, redesign, web app build, rescue sprint, or phased launch.
+            Send us the current state. We will help you choose between a new website, redesign, web app build, rescue sprint, or phased launch.
           </p>
           <Link
             href="/contact"

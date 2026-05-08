@@ -166,7 +166,7 @@ export function ContactCTA() {
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 0 }}
                   />
-                  SEO-ready website builds
+                  Custom website builds
                 </motion.span>
               </StaggerItem>
               <StaggerItem>
