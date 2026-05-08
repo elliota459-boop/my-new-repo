@@ -40,10 +40,10 @@ export function Navigation() {
               <Image
                 src="/brand/logo.png"
                 alt="IBNAY"
-                width={48}
-                height={48}
+                width={96}
+                height={96}
                 priority
-                className="object-contain h-14 w-14 md:h-16 md:w-16"
+                className="object-contain h-20 w-20 md:h-24 md:w-24"
               />
             </Link>
 
