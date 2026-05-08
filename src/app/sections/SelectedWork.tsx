@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -19,6 +20,7 @@ const projects = [
     color: 'from-violet-600/25 via-purple-500/10 to-slate-900',
     size: 'large',
     signals: ['BSC staking', 'Referral logic', 'Reward backend'],
+    unsplashImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ const projects = [
     color: 'from-violet-600/25 via-purple-500/10 to-slate-900',
     size: 'small',
     signals: ['BEP-20 token', 'Mining lock', 'Shopping points'],
+    unsplashImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const projects = [
     color: 'from-amber-600/25 via-orange-500/10 to-slate-900',
     size: 'small',
     signals: ['Queue engine', 'Instant settlement', 'Wallet states'],
+    unsplashImage: 'https://images.unsplash.com/photo-1512941937309-5a1b86471316?q=80&w=800&auto=format&fit=crop'
   },
   {
     id: 4,
@@ -52,13 +56,22 @@ const projects = [
     color: 'from-violet-600/20 via-slate-600/20 to-background-card',
     size: 'large',
     signals: ['Data flows', 'Role systems', 'NDA delivery'],
+    unsplashImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop'
   },
 ]
 
 function ProjectVisual({ project, compact = false }: { project: typeof projects[number], compact?: boolean }) {
   return (
-    <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,245,247,0.14),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(44,191,174,0.18),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
+    <div className={`absolute inset-0`}>
+      <Image
+        src={project.unsplashImage}
+        alt={`${project.name} project preview`}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80`} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,245,247,0.14),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(90,79,207,0.18),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
       <div className="absolute inset-6 rounded-lg border border-white/10 bg-background/35 p-4 backdrop-blur-sm">
         <div className="flex items-center gap-2 border-b border-white/10 pb-3">
           <span className="h-2.5 w-2.5 rounded-full bg-accent" />

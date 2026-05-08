@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, ArrowRight, TrendingUp, Users, CheckCircle, ChevronRight } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -20,6 +21,7 @@ const caseStudies = {
     duration: '14 weeks',
     team: 'Core engineering pod',
     visualColor: 'from-violet-600/30 via-purple-500/10 to-slate-950',
+    unsplashImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=1200&auto=format&fit=crop',
     proofNote: 'Metric shown against the client baseline during the post-launch review window. Public details are limited to protect product operations.',
     challenge: 'The client required a high-performance, decentralized staking ecosystem on BSC with a complex 10-level referral architecture. They needed more than just a frontend; they required a robust, audited smart contract suite and a backend capable of handling high-frequency reward distributions.',
     solution: 'We architected the staking, referral, backend, and dashboard layers as one connected product. The work focused on Solidity contract structure, reward distribution reliability, backend event handling, and a dashboard experience that made wallet states and user actions easier to understand.',
@@ -64,6 +66,7 @@ const caseStudies = {
     duration: '16 weeks',
     team: 'Backend and contract pod',
     visualColor: 'from-violet-600/30 via-purple-500/10 to-slate-950',
+    unsplashImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
     proofNote: 'Public case-study details focus on the technical workflow because operational data is client-owned.',
     challenge: 'ShagunPro needed a bridge between sustainable agriculture and decentralized finance. The challenge was building a complex ecosystem that could tokenize physical animal feed products and integrate a mining-based reward system.',
     solution: 'We focused on the core engineering: the backend and Solidity contracts. We built a robust BEP-20 token ecosystem with a 12-month mining lock and an integrated shopping point system, ensuring complete architectural integrity as committed.',
@@ -108,6 +111,7 @@ const caseStudies = {
     duration: '10 weeks',
     team: 'Product engineering pod',
     visualColor: 'from-amber-600/30 via-orange-500/10 to-slate-950',
+    unsplashImage: 'https://images.unsplash.com/photo-1512941937309-5a1b86471316?q=80&w=1200&auto=format&fit=crop',
     proofNote: 'The public metric is framed as a tracked product-flow improvement rather than a guaranteed trading outcome.',
     challenge: 'AgriTrade required a next-gen trading platform that could handle instant settlements and auto-matching queues without the overhead of traditional centralized exchanges.',
     solution: 'We built a high-intent trading ecosystem powered by immutable smart contracts. The platform features an automated matching engine and a multi-level referral reward system for community-driven growth.',
@@ -152,6 +156,7 @@ const caseStudies = {
     duration: 'Ongoing',
     team: 'Confidential delivery pod',
     visualColor: 'from-violet-600/20 via-slate-600/20 to-background-card',
+    unsplashImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
     proofNote: 'Specific metrics, screens, and client identifiers are intentionally withheld under NDA.',
     challenge: 'Under strict NDA, we tackle the most complex architectural challenges in AI and EdTech. These projects involve large-scale data modeling and proprietary machine learning infrastructures.',
     solution: 'We supported confidential product systems where architecture, access control, performance, and protected knowledge workflows mattered more than public-facing marketing. Public details are intentionally limited, but the engagement reflects our ability to work inside sensitive product environments.',
@@ -190,8 +195,16 @@ const caseStudies = {
 
 function CaseStudyVisual({ caseStudy }: { caseStudy: typeof caseStudies[keyof typeof caseStudies] }) {
   return (
-    <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.visualColor}`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(245,245,247,0.16),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(44,191,174,0.18),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_45%)]" />
+    <div className={`absolute inset-0`}>
+      <Image
+        src={caseStudy.unsplashImage}
+        alt={`${caseStudy.name} project preview`}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+      />
+      <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.visualColor}`} />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(245,245,247,0.16),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(90,79,207,0.18),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent_45%)]" />
       <div className="absolute inset-x-6 top-24 hidden max-w-4xl rounded-xl border border-white/10 bg-background/30 p-5 backdrop-blur-sm md:block lg:left-20 lg:right-auto lg:w-[52rem]">
         <div className="mb-5 flex items-center gap-2 border-b border-white/10 pb-4">
           <span className="h-2.5 w-2.5 rounded-full bg-accent" />
