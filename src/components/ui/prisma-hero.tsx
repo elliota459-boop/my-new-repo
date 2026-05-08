@@ -131,7 +131,7 @@ const PrismaHero = () => {
                 className="text-sm text-foreground/80 sm:text-base md:text-lg max-w-sm"
                 style={{ lineHeight: 1.3 }}
               >
-                Web design and development agency for businesses that need the right people to find them, trust them, and enquire. We build SEO-ready websites, landing pages, web apps, ecommerce, Web3 products, and rescue rebuilds that turn confused visitors into serious leads.
+                We help businesses like yours get found by the right customers, earn their trust quickly, and turn website visitors into paying clients. Whether you need a stunning website, a powerful web app, or a complete digital rescue, we build solutions that actually drive results—not just look pretty.
               </motion.p>
 
               <motion.div

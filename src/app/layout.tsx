@@ -10,11 +10,14 @@ import { ClientEngagementLayer } from '@/components/ClientEngagementLayer'
 
 export const metadata: Metadata = {
   title: 'IBNAY | Web Design, Development & SEO-Ready Websites',
-  description: 'IBNAY is a web design and development agency building SEO-ready websites, lead generation landing pages, custom web apps, ecommerce systems, Web3 dApps, and rescue rebuilds for businesses that need more qualified enquiries.',
+  description: 'IBNAY helps businesses get found by the right customers, build trust instantly, and convert website visitors into paying clients. We create SEO-optimized websites, custom web apps, ecommerce systems, Web3 dApps, and rescue unfinished projects that actually drive results.',
   keywords: 'web design agency, web development agency, website development company, custom website design, SEO website development, lead generation website, conversion focused website, website redesign agency, ecommerce website development, custom web application development, SaaS MVP development, web app development company, Web3 development agency, dApp development company, smart contract development, AI generated website rescue, unfinished website rebuild',
+  icons: {
+    icon: '/brand/logo.png',
+  },
   openGraph: {
     title: 'IBNAY | Web Design, Development & SEO-Ready Websites',
-    description: 'We build websites and web products that explain the offer clearly, earn trust quickly, and turn the right visitors into leads.',
+    description: 'We help businesses like yours get found by the right customers, build trust instantly, and convert website visitors into paying clients. From custom web design to full-stack development, we turn your digital presence into your best salesperson.',
     type: 'website',
   },
 }

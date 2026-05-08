@@ -23,7 +23,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-body text-foreground/60 max-w-xs">
-              Web design and development agency for SEO-ready websites, lead generation landing pages, custom web apps, Web3 products, and rescue rebuilds.
+              We help businesses turn website visitors into paying customers. From SEO-optimized sites to custom web apps, we build digital solutions that actually work.
             </p>
           </div>
 

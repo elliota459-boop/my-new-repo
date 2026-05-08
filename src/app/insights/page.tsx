@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, Tag, Sparkles } from 'lucide-react'
 import { ScrollReveal } from '@/components'
@@ -67,6 +68,9 @@ const articles = [
 
 export default function InsightsPage() {
   const [activeCategory, setActiveCategory] = useState('All')
+  const searchParams = useSearchParams()
+  const newsletterSuccess = searchParams.get('newsletter') === 'success'
+  
   const filteredArticles = activeCategory === 'All'
     ? articles.slice(1)
     : articles.slice(1).filter((article) => article.category === activeCategory)
@@ -74,6 +78,16 @@ export default function InsightsPage() {
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="w-full px-6 md:px-12 lg:px-20">
+        {newsletterSuccess && (
+          <ScrollReveal className="mb-8">
+            <div className="max-w-md mx-auto p-6 rounded-2xl bg-success/10 border border-success/20">
+              <h3 className="font-display text-lg text-success mb-2">Thanks for subscribing!</h3>
+              <p className="text-sm text-foreground-muted">
+                You'll receive our weekly build notes with practical insights for web and Web3 founders.
+              </p>
+            </div>
+          </ScrollReveal>
+        )}
         <ScrollReveal className="max-w-3xl mb-12">
           <motion.div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6"
