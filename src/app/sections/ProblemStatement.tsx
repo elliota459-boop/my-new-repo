@@ -63,7 +63,7 @@ export function ProblemStatement() {
               The real cost is not just bad design. It is months of lost time and a codebase no one wants to touch.
             </p>
             <p>
-              IBNAY designs and builds the full stack: frontend, backend, APIs, databases, smart contracts, and deployment. We turn your idea or half-built project into something that actually works and can grow.
+              IBNAY designs and builds the full stack: frontend, backend, APIs, databases, smart contracts, and deployment. Whether you need a brand new professional website or you need someone to fix and rescue what already exists — we turn your idea or half-built project into something that actually works and can grow.
             </p>
           </div>
         </div>

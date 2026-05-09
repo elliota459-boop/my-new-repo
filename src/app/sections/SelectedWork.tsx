@@ -20,7 +20,7 @@ const projects = [
     color: 'from-violet-600/25 via-purple-500/10 to-slate-900',
     size: 'large',
     signals: ['BSC staking', 'Referral logic', 'Reward backend'],
-    unsplashImage: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop'
+    unsplashImage: '/images/unicorn.png'
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const projects = [
     color: 'from-violet-600/25 via-purple-500/10 to-slate-900',
     size: 'small',
     signals: ['BEP-20 token', 'Mining lock', 'Shopping points'],
-    unsplashImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop'
+    unsplashImage: '/images/shagunpro.png'
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const projects = [
     color: 'from-amber-600/25 via-orange-500/10 to-slate-900',
     size: 'small',
     signals: ['Queue engine', 'Instant settlement', 'Wallet states'],
-    unsplashImage: 'https://images.unsplash.com/photo-1512941937309-5a1b86471316?q=80&w=800&auto=format&fit=crop'
+    unsplashImage: '/images/agritrade.png'
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const projects = [
     color: 'from-violet-600/20 via-slate-600/20 to-background-card',
     size: 'large',
     signals: ['Data flows', 'Role systems', 'NDA delivery'],
-    unsplashImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop'
+    unsplashImage: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=100&w=3840&auto=format&fit=crop'
   },
 ]
 
@@ -70,36 +70,8 @@ function ProjectVisual({ project, compact = false }: { project: typeof projects[
         className="object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
-      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80`} />
+      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40`} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(245,245,247,0.14),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(90,79,207,0.18),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
-      <div className="absolute inset-6 rounded-lg border border-white/10 bg-background/35 p-4 backdrop-blur-sm">
-        <div className="flex items-center gap-2 border-b border-white/10 pb-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-accent" />
-          <span className="h-2.5 w-2.5 rounded-full bg-warm" />
-          <span className="h-2.5 w-2.5 rounded-full bg-foreground/25" />
-          <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-foreground/45">
-            {project.industry}
-          </span>
-        </div>
-        <div className="mt-5 grid gap-3">
-          {project.signals.map((signal, index) => (
-            <div key={signal} className="flex items-center gap-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded-full border border-accent/30 bg-accent/10 font-mono text-[10px] text-accent">
-                0{index + 1}
-              </span>
-              <span className="h-2 flex-1 rounded-full bg-foreground/15" />
-              <span className="hidden max-w-[46%] truncate font-mono text-[10px] uppercase tracking-wider text-foreground/55 sm:block">
-                {signal}
-              </span>
-            </div>
-          ))}
-        </div>
-        {!compact && (
-          <div className="absolute bottom-4 left-4 right-4 rounded border border-accent/20 bg-accent/10 px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-accent-light">
-            {project.proof}
-          </div>
-        )}
-      </div>
     </div>
   )
 }

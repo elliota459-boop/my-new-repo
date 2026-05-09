@@ -56,7 +56,7 @@ export function MetricsStrip() {
                 ease: [0.22, 1, 0.36, 1]
               }}
               whileHover={{ 
-                backgroundColor: 'rgba(var(--accent), 0.05)',
+                backgroundColor: 'rgba(90, 79, 207, 0.05)',
                 scale: 1.02
               }}
             >

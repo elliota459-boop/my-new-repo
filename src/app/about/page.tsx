@@ -1,169 +1,307 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Award } from 'lucide-react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ArrowRight } from 'lucide-react'
+import FlowArt, { FlowSection } from '@/components/ui/story-scroll'
 
-gsap.registerPlugin(ScrollTrigger)
-
-const values = [
-  {
-    title: 'Ship Over Screenshots',
-    description: 'A design file is not a product. We do not celebrate mockups. We celebrate clean code, passing tests, successful deployments, and products your team can actually use.',
-  },
-  {
-    title: 'Architecture Before Polish',
-    description: 'We design the data model, API contracts, auth flows, and component system before worrying about animation speed. A beautiful product that crashes in production is not a product.',
-  },
-  {
-    title: 'Rescue Without Ego',
-    description: 'If a previous developer, agency, no-code tool, or AI build created something useful, we keep it. If it is fragile, we explain why and rebuild it cleanly. No blame, just progress.',
-  },
-  {
-    title: 'One Team, Whole Stack',
-    description: 'Designers who understand state management. Developers who understand user experience. We build websites, web apps, APIs, smart contracts, and deployment pipelines as one connected system.',
-  },
-]
-
-const capabilities = [
-  { name: 'Websites', count: 'Brand sites, landing pages, service pages' },
-  { name: 'Web Applications', count: 'SaaS MVPs, dashboards, portals' },
-  { name: 'Web3 Products', count: 'dApps, wallets, smart contracts' },
-  { name: 'Rescue Work', count: 'Half-built and AI-generated projects' },
-]
+/* ─────────────────────────────────────────────────────────────
+   About Page — FlowArt story-scroll experience
+   Five full-screen chapters tell the IBNAY story as the
+   visitor scrolls. Each panel sweeps in from a 30° rotation.
+────────────────────────────────────────────────────────────── */
 
 export default function AboutPage() {
-  const manifestoRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const sections = document.querySelectorAll('.about-section')
-      sections.forEach((section) => {
-        gsap.from(section, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 75%',
-          },
-        })
-      })
-    })
-
-    return () => ctx.revert()
-  }, [])
-
   return (
-    <div className="min-h-screen bg-background pt-32 pb-20">
-      <div className="w-full px-6 md:px-12 lg:px-20">
-        <section ref={manifestoRef} className="about-section mb-32">
-          <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            About IBNAY
-          </span>
-          <h1 className="font-display text-display-md md:text-display-lg text-foreground mb-8 max-w-4xl">
-            We are a design and engineering studio that builds websites, web apps, and Web3 products.
+    <FlowArt aria-label="About IBNAY — Our Story">
+
+      {/* ── 01 Who We Are ─────────────────────────────────── */}
+      <FlowSection
+        aria-label="Who we are"
+        style={{ backgroundColor: '#0B0F12', color: '#F5F5F7' }}
+      >
+        {/* top label — sits below the fixed nav (~80px) */}
+        <p className="pt-20 font-mono text-xs font-bold uppercase tracking-[0.25em] text-white/40">
+          01 — Who We Are
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div>
+          <h1
+            className="font-display font-bold leading-[0.88] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3.5rem, 12vw, 14rem)' }}
+          >
+            We Build
+            <br />
+            Websites
           </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <p className="text-body-lg text-foreground/60 leading-relaxed">
-              Some clients come with a business idea and need a product built from scratch. Others have a half-built MVP, a broken WordPress site, an abandoned agency project, or an AI-generated prototype that looks finished but has no real backend. Some just need a team that can handle design, frontend, backend, and deployment without handing off between three different vendors.
-            </p>
-            <p className="text-body-lg text-foreground/60 leading-relaxed">
-              IBNAY exists for that moment. We design and build websites, landing pages, SaaS MVPs, dashboards, ecommerce backends, APIs, smart contracts, wallet flows, dApps, and the deployment systems around them. One team. One codebase. One point of contact.
-            </p>
-          </div>
-        </section>
+        </div>
 
-        <section className="about-section mb-32 py-20 border-y border-border">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-4">
-              <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-                What Makes Us Different
-              </span>
-            </div>
-            <div className="lg:col-span-8">
-              <h2 className="font-display text-display-sm text-foreground mb-8">
-                We care about the parts that decide whether a product actually ships.
-              </h2>
-              <div className="space-y-6 text-body text-foreground/60">
-                <p>
-                  A design agency might stop at mockups. A dev shop might ship features without thinking about user experience. We do both because modern products need both. The interface and the infrastructure are the same product.
-                </p>
-                <p>
-                  That means your UI must be intuitive, your API must be reliable, your database must scale, your auth must be secure, your smart contracts must be tested, your deployment must be automated, and your documentation must exist so the next developer can pick it up without calling us.
-                </p>
-                <p>
-                  We are especially useful when a project is already in motion but stuck. We enter the existing codebase, audit it honestly, and turn a confusing build into a practical path to production.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <hr className="border-none border-t border-white/10" />
 
-        <section className="about-section mb-32">
-          <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-            Our Values
-          </span>
-          <h2 className="font-display text-display-sm text-foreground mb-12">
-            How We Work
+        <p
+          className="max-w-[55ch] font-normal leading-relaxed text-white/60"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.6rem)' }}
+        >
+          IBNAY is a website design and development agency. We build new
+          websites, fix broken ones, and rescue half-built projects that
+          have stalled. One team owns the design, frontend, backend, and
+          deployment — no handoffs, no gaps.
+        </p>
+      </FlowSection>
+
+      {/* ── 02 What We Do ─────────────────────────────────── */}
+      <FlowSection
+        aria-label="What we do"
+        style={{ backgroundColor: '#12181C', color: '#F5F5F7' }}
+      >
+        <p className="pt-20 font-mono text-xs font-bold uppercase tracking-[0.25em] text-white/40">
+          02 — What We Do
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div>
+          <h2
+            className="font-display font-bold leading-[0.88] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3.5rem, 12vw, 14rem)' }}
+          >
+            Build.
+            <br />
+            Fix.
+            <br />
+            Launch.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="p-8 border border-border rounded-lg group hover:border-accent/50 transition-colors">
-                <h3 className="font-display text-heading-md text-foreground mb-4 group-hover:text-accent transition-colors">
-                  {value.title}
-                </h3>
-                <p className="text-body text-foreground/60">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        </div>
 
-        <section className="about-section mb-32 py-20 bg-surface-dark rounded-2xl">
-          <div className="w-full px-8 md:px-12">
-            <div className="text-center mb-12">
-              <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
-                Capability Map
-              </span>
-              <h2 className="font-display text-display-sm text-foreground">
-                What We Can Own
-              </h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {capabilities.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Award className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-display text-heading-sm text-foreground mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="font-mono text-label text-foreground/50">
-                    {item.count}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <hr className="border-none border-t border-white/10" />
 
-        <section className="about-section text-center">
-          <h2 className="font-display text-display-sm text-foreground mb-4">
-            Have a project that needs to ship?
+        <p
+          className="max-w-[55ch] font-normal leading-relaxed text-white/60"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.6rem)' }}
+        >
+          Some clients need a professional website built from scratch.
+          Others have a broken WordPress site, an abandoned agency project,
+          or an AI-generated prototype that needs real engineering behind it.
+          We serve both.
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div className="flex flex-wrap gap-[3vw]">
+          {[
+            {
+              title: 'New Websites',
+              body: 'Business sites, landing pages, service pages, ecommerce stores — designed, built, and deployed.',
+            },
+            {
+              title: 'Web Applications',
+              body: 'SaaS MVPs, dashboards, portals, booking flows, admin tools, payments, and APIs.',
+            },
+            {
+              title: 'Project Rescue',
+              body: 'Half-built repos, broken WordPress sites, AI prototypes, abandoned agency projects — we fix and finish them.',
+            },
+            {
+              title: 'Web3 Products',
+              body: 'Smart contracts, dApps, wallet flows, token systems, DeFi dashboards, and NFT utilities.',
+            },
+          ].map(({ title, body }) => (
+            <div key={title} className="min-w-[180px] flex-1">
+              <p className="mb-2 text-sm font-bold uppercase tracking-wider text-white/90">{title}</p>
+              <p
+                className="leading-relaxed text-white/50"
+                style={{ fontSize: 'clamp(0.85rem, 1.2vw, 1rem)' }}
+              >
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </FlowSection>
+
+      {/* ── 03 How We Work ────────────────────────────────── */}
+      <FlowSection
+        aria-label="How we work"
+        style={{ backgroundColor: '#0B0F12', color: '#F5F5F7' }}
+      >
+        <p className="pt-20 font-mono text-xs font-bold uppercase tracking-[0.25em] text-white/40">
+          03 — How We Work
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div>
+          <h2
+            className="font-display font-bold leading-[0.88] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3.5rem, 12vw, 14rem)' }}
+          >
+            Scope.
+            <br />
+            Build.
+            <br />
+            Ship.
           </h2>
-          <p className="text-body text-foreground/60 mb-8 max-w-xl mx-auto">
-            Send us what you have. We will tell you whether to start fresh, redesign, rebuild, or rescue the current codebase.
-          </p>
-          <Link href="/contact" className="btn-primary group">
-            Start a Conversation
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </div>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <p
+          className="max-w-[55ch] font-normal leading-relaxed text-white/60"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.6rem)' }}
+        >
+          No vague phases, no vanity deliverables. We scope the work,
+          design the system, write the code, test it, and deploy it.
+          You see progress every week.
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div className="flex flex-wrap gap-[3vw]">
+          {[
+            {
+              step: '01',
+              title: 'Discovery & Scope',
+              body: 'We review your idea, repo, existing site, or brief — then write a clear scope with timeline and cost.',
+            },
+            {
+              step: '02',
+              title: 'Architecture First',
+              body: 'Backend structure, database schema, API design, and component system before a pixel of UI is designed.',
+            },
+            {
+              step: '03',
+              title: 'Build & Review',
+              body: 'Weekly builds shared in staging. You review, give feedback, and see real progress — not promises.',
+            },
+            {
+              step: '04',
+              title: 'Deploy & Hand Off',
+              body: 'Production deployment, documentation, and a clean handoff. You own everything — code, assets, access.',
+            },
+          ].map(({ step, title, body }) => (
+            <div key={step} className="min-w-[180px] flex-1">
+              <p className="mb-2 text-sm font-bold uppercase tracking-wider text-white/30">{step}</p>
+              <p className="mb-1 text-sm font-bold uppercase tracking-wider text-white/90">{title}</p>
+              <p
+                className="leading-relaxed text-white/50"
+                style={{ fontSize: 'clamp(0.85rem, 1.2vw, 1rem)' }}
+              >
+                {body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </FlowSection>
+
+      {/* ── 04 Why Choose Us ──────────────────────────────── */}
+      <FlowSection
+        aria-label="Why choose IBNAY"
+        style={{ backgroundColor: '#0D1525', color: '#F5F5F7' }}
+      >
+        <p className="pt-20 font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#2cBFAE]/60">
+          04 — Why Choose Us
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div>
+          <h2
+            className="font-display font-bold leading-[0.88] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3.5rem, 12vw, 14rem)' }}
+          >
+            One Team.
+            <br />
+            Full Stack.
+          </h2>
+        </div>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <p
+          className="mt-auto ml-auto max-w-[55ch] text-right font-normal leading-relaxed text-white/60"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.6rem)' }}
+        >
+          Most agencies split design, frontend, and backend across
+          different vendors. IBNAY is one team that owns all of it —
+          which means faster delivery, zero blame-shifting, and a
+          codebase that actually holds together.
+        </p>
+
+        <hr className="border-none border-t border-white/10" />
+
+        <div className="flex flex-wrap gap-[3vw]">
+          {[
+            { stat: '40+',  label: 'Projects Shipped' },
+            { stat: '12+',  label: 'Industries Served' },
+            { stat: '4–10', label: 'Weeks to Launch' },
+            { stat: '98%',  label: 'Documented Handoffs' },
+          ].map(({ stat, label }) => (
+            <div key={label} className="min-w-[140px] flex-1">
+              <p
+                className="font-display font-bold text-[#2cBFAE]"
+                style={{ fontSize: 'clamp(2rem, 5vw, 5rem)' }}
+              >
+                {stat}
+              </p>
+              <p className="font-mono text-xs uppercase tracking-widest text-white/40">{label}</p>
+            </div>
+          ))}
+        </div>
+      </FlowSection>
+
+      {/* ── 05 Start a Project ────────────────────────────── */}
+      <FlowSection
+        aria-label="Start a project"
+        style={{ backgroundColor: '#5a4fcf', color: '#fff' }}
+      >
+        <p className="pt-20 font-mono text-xs font-bold uppercase tracking-[0.25em] text-white/50">
+          05 — Let&apos;s Build
+        </p>
+
+        <hr className="border-none border-t border-white/20" />
+
+        <div>
+          <h2
+            className="font-display font-bold leading-[0.88] uppercase tracking-tight"
+            style={{ fontSize: 'clamp(3.5rem, 12vw, 14rem)' }}
+          >
+            Ready
+            <br />
+            To
+            <br />
+            Begin?
+          </h2>
+        </div>
+
+        <hr className="border-none border-t border-white/20" />
+
+        <p
+          className="max-w-[50ch] font-normal leading-relaxed text-white/70"
+          style={{ fontSize: 'clamp(1rem, 2.2vw, 1.6rem)' }}
+        >
+          Send us what you have — an idea, a Figma file, a broken repo,
+          a slow website. We&apos;ll review it and tell you exactly what
+          it needs and how long it will take.
+        </p>
+
+        <div className="flex flex-wrap items-center gap-6">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 font-mono text-sm font-bold uppercase tracking-widest text-[#5a4fcf] transition-all hover:bg-white/90"
+          >
+            Start a Project
+            <ArrowRight className="h-4 w-4" />
           </Link>
-        </section>
-      </div>
-    </div>
+          <Link
+            href="/services"
+            className="font-mono text-sm uppercase tracking-widest text-white/60 underline underline-offset-4 transition-colors hover:text-white"
+          >
+            View All Services
+          </Link>
+        </div>
+      </FlowSection>
+
+    </FlowArt>
   )
 }

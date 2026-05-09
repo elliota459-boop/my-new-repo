@@ -307,8 +307,8 @@ export default function ServicesPage() {
           </motion.div>
           
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mb-6 max-w-4xl">
-            Design, Engineering,
-            <span className="text-accent block">and Web3</span>
+            Website Design, Development
+            <span className="text-accent block">&amp; Rescue Services</span>
           </h1>
           <p className="text-xl text-foreground-muted max-w-2xl leading-relaxed mb-8">
             We build websites, web applications, backend systems, and Web3 products. One team handles the design, frontend, backend, database, smart contracts, and deployment. No handoffs, no gaps.
@@ -532,8 +532,58 @@ export default function ServicesPage() {
           ))}
         </div>
 
+        {/* FAQ Section */}
+        <div className="mt-32 border-t border-border pt-16">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-label text-foreground/50 tracking-widest uppercase block mb-4">
+              Common Questions
+            </span>
+            <h2 className="font-display text-display-sm text-foreground mb-12">
+              Website & Development FAQs
+            </h2>
+            <div className="space-y-0 divide-y divide-border">
+              {[
+                {
+                  q: 'How much does a website cost?',
+                  a: 'A professional custom website typically starts from $8,000. The final cost depends on the number of pages, design complexity, whether you need a CMS, ecommerce, forms, integrations, or a custom backend. We provide a detailed quote after a free 30-minute project review.',
+                },
+                {
+                  q: 'Can you fix a website that was built by someone else?',
+                  a: 'Yes. Website rescue and rebuild is one of our core services. We audit the existing codebase, identify what is working and what is broken, and either repair or rebuild it cleanly. We work with WordPress sites, abandoned agency projects, AI-generated prototypes, and half-built custom codebases.',
+                },
+                {
+                  q: 'How long does it take to build a website?',
+                  a: 'A standard business website or landing page typically takes 4–8 weeks from kickoff to launch. A full web application, SaaS MVP, or ecommerce platform takes 8–16 weeks depending on complexity. We give you a realistic timeline in our project scope document before work begins.',
+                },
+                {
+                  q: 'What is the difference between a website redesign and a website rebuild?',
+                  a: 'A redesign keeps the existing code structure and updates the visual design, layout, and content. A rebuild replaces the codebase entirely — usually because the existing structure is too fragile, slow, or hard to maintain. After our audit, we recommend which approach saves more time and budget.',
+                },
+                {
+                  q: 'Do I need to hire a web designer and a web developer separately?',
+                  a: 'Not with IBNAY. We are a full-stack website agency — one team handles UI/UX design, frontend development, backend engineering, database setup, and deployment. This means no handoffs between vendors, no gaps in responsibility, and one point of contact throughout the project.',
+                },
+                {
+                  q: 'Do you only build Web3 and blockchain websites?',
+                  a: 'No. Web3 is one service line alongside our core website and web application work. We build professional business websites, service pages, ecommerce stores, SaaS MVPs, dashboards, and portals. Web3 is available for clients who need it but is not a requirement.',
+                },
+              ].map((item, i) => (
+                <details key={i} className="group py-6 cursor-pointer">
+                  <summary className="flex items-center justify-between gap-4 list-none">
+                    <h3 className="font-display text-heading-sm text-foreground group-open:text-accent transition-colors">{item.q}</h3>
+                    <span className="w-6 h-6 rounded-full border border-border flex items-center justify-center flex-shrink-0 group-open:border-accent group-open:text-accent transition-colors text-foreground/40 font-mono text-sm">
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-4 text-body text-foreground/60 leading-relaxed max-w-2xl">{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA */}
-        <div className="mt-32 text-center py-16 border-t border-border">
+        <div className="mt-24 text-center py-16 border-t border-border">
           <h2 className="font-display text-display-sm text-foreground mb-4">
             Not sure what you need?
           </h2>

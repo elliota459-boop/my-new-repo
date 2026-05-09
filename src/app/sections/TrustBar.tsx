@@ -48,7 +48,7 @@ export function TrustBar() {
       <div className="w-full px-6 md:px-12 lg:px-20">
         {/* Label */}
         <p className="font-mono text-label text-background/50 text-center mb-12 tracking-widest uppercase">
-          Trusted by forward-thinking brands across 12 industries
+          Trusted by businesses across 12 industries
         </p>
 
         {/* Logo Marquee */}
@@ -67,14 +67,14 @@ export function TrustBar() {
               >
                 <motion.div 
                   className="font-display text-2xl md:text-3xl text-background/80"
-                  whileHover={{ color: 'rgb(var(--background))' }}
+                  whileHover={{ color: '#0B0F12' }}
                   transition={{ duration: 0.2 }}
                 >
                   {client.name}
                 </motion.div>
                 <motion.span 
                   className="font-mono text-label text-background/40 mt-1"
-                  whileHover={{ color: 'rgba(var(--accent), 0.8)' }}
+                  whileHover={{ color: 'rgba(90, 79, 207, 0.8)' }}
                   transition={{ duration: 0.2 }}
                 >
                   {client.industry}

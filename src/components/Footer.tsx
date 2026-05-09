@@ -23,7 +23,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-body text-foreground/60 max-w-xs">
-              We design and build websites, web applications, and Web3 products. From landing pages to smart contracts, one team handles the full stack.
+              We design and build websites, web applications, and Web3 products. We also fix, redesign, and rescue broken or half-built projects. One team, full stack.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-mono text-label text-foreground/40">
-            Copyright {currentYear} IBNAY Digital Studio. All rights reserved.
+            Copyright {currentYear} IBNAY &mdash; Website Design &amp; Development Agency. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="font-mono text-label text-foreground/40 hover:text-foreground/70 transition-colors">

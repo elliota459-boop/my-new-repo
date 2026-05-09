@@ -9,17 +9,79 @@ import { AnimationProvider } from '@/components/AnimationProvider'
 import { ClientEngagementLayer } from '@/components/ClientEngagementLayer'
 
 export const metadata: Metadata = {
-  title: 'IBNAY | Digital Studio',
-  description: 'IBNAY designs and builds websites, web applications, and Web3 products. Custom frontend, solid backend, smart contracts, and deployment. From landing pages to dApps, one team handles the full stack.',
-  keywords: 'web design, web development, website builder, custom website, web application, SaaS MVP, dashboard development, ecommerce development, React developer, Next.js developer, Web3 development, dApp development, smart contract developer, Solidity developer, project rescue, AI prototype cleanup, frontend development, backend development, API development',
+  title: {
+    default: 'IBNAY | Website Design & Development Agency',
+    template: '%s | IBNAY',
+  },
+  description: 'IBNAY is a website design and development agency. We build new websites, fix broken ones, and rescue half-built projects. Custom websites, web apps, ecommerce, and Web3 — one team, full stack, shipped right.',
+  keywords: 'website design agency, website development company, web design agency, custom website design, website redesign, fix broken website, website rescue, web application development, SaaS MVP, ecommerce development, website agency India, website agency Estonia, Next.js developer, React developer, Web3 development, project rescue, broken website repair, website not working fix',
+  metadataBase: new URL('https://ibnayiftribe.com'),
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: '/brand/logo.png',
   },
   openGraph: {
-    title: 'IBNAY | Digital Studio',
-    description: 'IBNAY designs and builds websites, web applications, and Web3 products. Custom frontend, solid backend, smart contracts, and deployment. One team, full stack, shipped products.',
+    title: 'IBNAY | Website Design & Development Agency',
+    description: 'We build new websites, fix broken ones, and rescue half-built projects. Custom websites, web apps, ecommerce, and Web3 — one team, full stack.',
     type: 'website',
+    url: 'https://ibnayiftribe.com',
+    siteName: 'IBNAY',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IBNAY | Website Design & Development Agency',
+    description: 'We build new websites, fix broken ones, and rescue half-built projects. One team, full stack.',
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'IBNAY',
+  alternateName: 'IBNAY Digital Studio',
+  url: 'https://ibnayiftribe.com',
+  logo: 'https://ibnayiftribe.com/brand/logo.png',
+  description:
+    'Website design and development agency. We build new websites, redesign existing ones, rescue half-built projects, and develop custom web applications and Web3 products.',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Tartu mnt 67/1-13b',
+    addressLocality: 'Tallinn',
+    addressRegion: 'Harju maakond',
+    postalCode: '10115',
+    addressCountry: 'EE',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+917861010850',
+    contactType: 'customer service',
+    availableLanguage: ['English'],
+    email: 'info@ibnayiftribe.com',
+  },
+  sameAs: [
+    'https://www.linkedin.com/in/dr-shahbaaz-azmi-618a95152',
+    'https://instagram.com/ibnay_iftribe',
+  ],
+  areaServed: [
+    { '@type': 'Country', name: 'Estonia' },
+    { '@type': 'Country', name: 'India' },
+    { '@type': 'GeoShape', name: 'Worldwide' },
+  ],
+  priceRange: '$$$',
+  serviceType: [
+    'Website Design',
+    'Website Development',
+    'Website Redesign',
+    'Broken Website Repair',
+    'Project Rescue',
+    'Web Application Development',
+    'SaaS MVP Development',
+    'Ecommerce Development',
+    'Web3 Development',
+    'Smart Contract Development',
+  ],
 }
 
 export default function RootLayout({
@@ -32,6 +94,10 @@ export default function RootLayout({
       <head>
         <GoogleAnalytics />
         <MetaPixel />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body className="antialiased">
         <GoogleAnalyticsNoScript />

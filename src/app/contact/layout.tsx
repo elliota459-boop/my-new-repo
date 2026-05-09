@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact IBNAY | Start Your Web Project',
-  description: 'Ready to build a website or web app? Contact IBNAY for web design, development, and custom applications. Get a project plan and quote.',
-  keywords: 'contact web designer, website development quote, web app development contact, custom website contact',
+  title: 'Contact — Start Your Web Project',
+  description: 'Ready to build a new website, fix a broken one, or rescue a half-built project? Contact IBNAY for a free 30-minute project review. Website design, development, redesign, and rescue.',
+  keywords: 'contact website agency, website design quote, fix broken website contact, website redesign inquiry, web development contact, website rescue quote, hire web designer, free website consultation',
   openGraph: {
     title: 'Contact IBNAY | Start Your Web Project',
-    description: 'Get in touch to discuss your web design or development project. Free consultation and project planning.',
+    description: 'Build a new website, redesign an existing one, or rescue a broken project. Free 30-minute review, response within 4 hours.',
     type: 'website',
   },
 }

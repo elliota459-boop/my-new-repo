@@ -10,17 +10,17 @@ gsap.registerPlugin(ScrollTrigger)
 const differentiators = [
   {
     icon: Target,
-    headline: 'Full-Stack Engineering',
+    headline: 'One Team. Design to Deployment.',
     copy: 'We do not hand off between designers and developers. One team owns the UI, frontend, backend, database, APIs, and deployment. No gaps, no blame shifting, no broken handoffs.',
   },
   {
     icon: BarChart3,
-    headline: 'Ship Before Polish',
-    copy: 'We build the architecture first, test it, then refine the surface. You get a working product early, not a perfect mockup that falls apart in production.',
+    headline: 'Working Products, Not Endless Mockups',
+    copy: 'We build the architecture first, test it, then refine the surface. You get a working product early — not a perfect mockup that falls apart in production.',
   },
   {
     icon: Compass,
-    headline: 'Rescue Without Ego',
+    headline: 'We Fix What Others Left Behind',
     copy: 'Half-built projects, AI-generated prototypes, messy repos, abandoned agency work — we audit what exists, keep what works, and rebuild what is fragile. No drama, just shipping.',
   },
 ]
@@ -61,7 +61,7 @@ export function Differentiator() {
             Why It Works
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground">
-            Built Different
+            Why Clients Choose IBNAY
           </h2>
         </div>
 

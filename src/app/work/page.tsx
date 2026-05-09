@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -19,6 +20,7 @@ const projects = [
     description: 'Engineered a comprehensive referral staking architecture on BSC. From Solidity smart contracts to high-frequency backend systems.',
     color: 'from-violet-600/30 via-purple-500/10 to-slate-950',
     signals: ['Staking dashboard', 'Referral engine', 'Reward backend'],
+    unsplashImage: '/images/unicorn.png'
   },
   {
     id: 2,
@@ -29,6 +31,7 @@ const projects = [
     description: 'Developed the entire backend and smart contract infrastructure for a multi-layered agri-fintech ecosystem.',
     color: 'from-violet-600/30 via-purple-500/10 to-slate-950',
     signals: ['BEP-20 token', 'Mining lock', 'Product tokenization'],
+    unsplashImage: '/images/shagunpro.png'
   },
   {
     id: 3,
@@ -39,6 +42,7 @@ const projects = [
     description: 'Architected a decentralized trading platform featuring auto-matching queues and instant settlements.',
     color: 'from-amber-600/30 via-orange-500/10 to-slate-950',
     signals: ['Queue logic', 'Settlement states', 'Trading dashboard'],
+    unsplashImage: '/images/agritrade.png'
   },
   {
     id: 4,
@@ -49,6 +53,7 @@ const projects = [
     description: 'Under strict NDA, we developed complex AI-driven modeling and large-scale EdTech infrastructures.',
     color: 'from-violet-600/25 via-slate-600/20 to-background-card',
     signals: ['Data pipeline', 'Role systems', 'Protected IP'],
+    unsplashImage: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=100&w=3840&auto=format&fit=crop'
   },
 ]
 
@@ -56,33 +61,16 @@ const filters = ['All', 'DeFi', 'Fintech', 'Crypto', 'AI', 'EdTech']
 
 function ProjectEvidenceVisual({ project }: { project: typeof projects[number] }) {
   return (
-    <div className={`absolute inset-0 bg-gradient-to-br ${project.color}`}>
+    <div className={`absolute inset-0`}>
+      <Image
+        src={project.unsplashImage}
+        alt={`${project.name} project preview`}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-40`} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(245,245,247,0.16),transparent_25%),radial-gradient(circle_at_85%_10%,rgba(44,191,174,0.18),transparent_30%)]" />
-      <div className="absolute inset-5 rounded-lg border border-white/10 bg-background/35 p-4 backdrop-blur-sm">
-        <div className="flex items-center gap-2 border-b border-white/10 pb-3">
-          <span className="h-2 w-2 rounded-full bg-accent" />
-          <span className="h-2 w-2 rounded-full bg-warm" />
-          <span className="h-2 w-2 rounded-full bg-foreground/25" />
-          <span className="ml-auto font-mono text-[10px] uppercase tracking-widest text-foreground/45">
-            Evidence map
-          </span>
-        </div>
-        <div className="mt-5 space-y-3">
-          {project.signals.map((signal, index) => (
-            <div key={signal} className="grid grid-cols-[auto_1fr] items-center gap-3">
-              <span className="flex h-7 w-7 items-center justify-center rounded border border-accent/25 bg-accent/10 font-mono text-[10px] text-accent">
-                {index + 1}
-              </span>
-              <div>
-                <span className="block h-2 rounded-full bg-foreground/15" />
-                <span className="mt-2 block font-mono text-[10px] uppercase tracking-wider text-foreground/55">
-                  {signal}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }

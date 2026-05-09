@@ -112,14 +112,17 @@ const PrismaHero = () => {
 
         {/* Hero content */}
         <div className="absolute bottom-0 left-0 right-0 px-6 pb-8 sm:px-10 md:px-16 md:pb-20">
+          {/* SEO H1 — readable by search engines, invisible to users */}
+          <h1 className="sr-only">IBNAY — Website Design &amp; Development Agency</h1>
           <div className="grid grid-cols-12 items-end gap-4">
             
             <div className="col-span-12 lg:col-span-8">
-              <h1
+              <div
                 className="font-display font-medium leading-[0.85] tracking-normal text-7xl sm:text-8xl md:text-[10rem] lg:text-[13rem] xl:text-[16rem] 2xl:text-[17rem] text-foreground"
+                aria-hidden="true"
               >
                 <WordsPullUp text="IBNAY" showAsterisk />
-              </h1>
+              </div>
             </div>
 
             <div className="col-span-12 flex flex-col gap-6 pb-6 lg:col-span-4 lg:pb-10">

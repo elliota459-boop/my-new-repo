@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About IBNAY | Web Design & Development Studio',
-  description: 'IBNAY is a web design and development studio that builds websites, custom web apps, ecommerce, Web3 products, and rescue rebuilds.',
-  keywords: 'web design studio, website development company, about IBNAY, web development team, digital studio',
+  title: 'About — Website Design & Development Agency',
+  description: 'IBNAY is a website design and development agency. We build professional websites from scratch, redesign existing ones, and rescue broken or half-built projects. One team, full stack, no handoffs.',
+  keywords: 'website design agency, website development company, about IBNAY, web design team, fix broken website, website rescue agency, website redesign company, full stack web agency',
   openGraph: {
-    title: 'About IBNAY | Web Design & Development Agency',
-    description: 'Learn about IBNAY - a web studio that builds websites and apps that actually work. Custom development, Web3, and rescue projects.',
+    title: 'About IBNAY | Website Design & Development Agency',
+    description: 'We build new websites, fix broken ones, and rescue half-built projects. One team handles design, frontend, backend, and deployment.',
     type: 'website',
   },
 }

@@ -87,10 +87,10 @@ export function Testimonials() {
         <div ref={contentRef}>
           <div className="text-center mb-16">
             <span className="font-mono text-label text-background/50 tracking-widest uppercase block mb-4">
-              From The People Who Hired Us
+              Client Reviews
             </span>
             <h2 className="font-display text-display-sm md:text-display-md text-background">
-              Build Results
+              What Clients Say
             </h2>
           </div>
 
@@ -146,7 +146,7 @@ export function Testimonials() {
                   <motion.button
                     onClick={prevTestimonial}
                     className="w-12 h-12 rounded-full border border-border flex items-center justify-center"
-                    whileHover={{ borderColor: 'rgb(var(--accent))', color: 'rgb(var(--accent))' }}
+                    whileHover={{ borderColor: '#5a4fcf', color: '#5a4fcf' }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.2 }}
                     aria-label="Previous testimonial"
@@ -158,7 +158,7 @@ export function Testimonials() {
                   <motion.button
                     onClick={nextTestimonial}
                     className="w-12 h-12 rounded-full border border-border flex items-center justify-center"
-                    whileHover={{ borderColor: 'rgb(var(--accent))', color: 'rgb(var(--accent))' }}
+                    whileHover={{ borderColor: '#5a4fcf', color: '#5a4fcf' }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.2 }}
                     aria-label="Next testimonial"

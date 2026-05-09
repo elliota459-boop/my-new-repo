@@ -85,9 +85,9 @@ export function ServicesOverview() {
             What We Build
           </span>
           <h2 className="font-display text-display-sm md:text-display-md text-foreground">
-            Design, Engineering,
+            Build, Fix,
             <br />
-            <span className="text-accent">and Shipping</span>
+            <span className="text-accent">and Launch</span>
           </h2>
         </div>
 
@@ -121,13 +121,13 @@ export function ServicesOverview() {
 
                   <motion.div
                     className="absolute inset-0 rounded-lg border border-accent/0"
-                    whileHover={{ borderColor: 'rgba(var(--accent), 0.5)' }}
+                    whileHover={{ borderColor: 'rgba(90, 79, 207, 0.5)' }}
                     transition={{ duration: 0.3 }}
                   />
 
                   <motion.span
                     className="font-mono text-label text-foreground/30 absolute top-8 right-8"
-                    whileHover={{ y: -4, color: 'rgba(var(--accent), 0.6)' }}
+                    whileHover={{ y: -4, color: 'rgba(90, 79, 207, 0.6)' }}
                     transition={{ type: 'spring', stiffness: 400 }}
                   >
                     {service.number}
@@ -136,7 +136,7 @@ export function ServicesOverview() {
                   <div className="relative z-10">
                     <motion.h3
                       className="font-display text-heading-md text-foreground mb-4"
-                      whileHover={{ color: 'rgb(var(--accent))' }}
+                      whileHover={{ color: '#5a4fcf' }}
                       transition={{ duration: 0.2 }}
                     >
                       {service.title}

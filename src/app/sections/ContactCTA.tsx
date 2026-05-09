@@ -99,9 +99,9 @@ export function ContactCTA() {
 
           {/* Headline */}
           <h2 className="font-display text-display-sm md:text-display-md lg:text-display-lg text-foreground mb-6 leading-tight">
-            Have an idea, a half-built product,
+            Need a new website, a redesign,
             <br />
-            <span className="text-accent">or a website that needs to ship?</span>
+            <span className="text-accent">or a broken project fixed?</span>
           </h2>
 
           {/* Subheadline */}
@@ -111,7 +111,7 @@ export function ContactCTA() {
 
           {/* CTA Block */}
           <div className="flex flex-col items-center gap-8">
-            <GlowEffect glowColor="rgba(var(--accent), 0.4)" intensity="medium">
+            <GlowEffect glowColor="rgba(90, 79, 207, 0.4)" intensity="medium">
               <Link
                 href="/contact"
                 className="btn-primary text-lg px-12 py-5 group"
@@ -158,7 +158,7 @@ export function ContactCTA() {
               <StaggerItem>
                 <motion.span
                   className="flex items-center gap-2 cursor-default"
-                  whileHover={{ scale: 1.05, color: 'rgba(var(--foreground), 0.7)' }}
+                  whileHover={{ scale: 1.05, color: 'rgba(245, 245, 247, 0.7)' }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <motion.span
@@ -172,7 +172,7 @@ export function ContactCTA() {
               <StaggerItem>
                 <motion.span
                   className="flex items-center gap-2 cursor-default"
-                  whileHover={{ scale: 1.05, color: 'rgba(var(--foreground), 0.7)' }}
+                  whileHover={{ scale: 1.05, color: 'rgba(245, 245, 247, 0.7)' }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <motion.span
@@ -186,7 +186,7 @@ export function ContactCTA() {
               <StaggerItem>
                 <motion.span
                   className="flex items-center gap-2 cursor-default"
-                  whileHover={{ scale: 1.05, color: 'rgba(var(--foreground), 0.7)' }}
+                  whileHover={{ scale: 1.05, color: 'rgba(245, 245, 247, 0.7)' }}
                   transition={{ type: 'spring', stiffness: 400 }}
                 >
                   <motion.span
@@ -194,7 +194,7 @@ export function ContactCTA() {
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                   />
-                  Web apps and Web3 delivery
+                  Web apps and Web3 development
                 </motion.span>
               </StaggerItem>
             </StaggerContainer>
